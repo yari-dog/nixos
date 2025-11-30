@@ -1,0 +1,21 @@
+{
+  "plugins": {
+    "blink.cmp": {
+      "version": "'v1.6.0'"
+    },
+    "bufferline.nvim": [],
+    "conform.nvim": [],
+    "gruvbox-material.nvim": [],
+    "lazydev.nvim": [],
+    "lualine.nvim": [],
+    "mason.nvim": [],
+    "mini.pick": [],
+    "nvim-autopairs": [],
+    "nvim-lspconfig": [],
+    "nvim-treesitter": [],
+    "oil.nvim": [],
+    "smear-cursor.nvim": [],
+    "vim-suda": [],
+    "which-key.nvim": []
+  }
+}

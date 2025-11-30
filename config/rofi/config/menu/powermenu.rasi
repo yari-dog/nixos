@@ -1,0 +1,109 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Rofi Theme File
+ * Rofi Version: 1.7.3
+ **/
+
+/*****----- Configuration -----*****/
+configuration {
+    show-icons:                 false;
+}
+
+
+@import "~/.config/rofi/base-style.rasi"
+window {
+    width: 700;
+}
+/*****----- Main Box -----*****/
+mainbox {
+    children:                    [ "message", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    border:                      0px;
+    padding:                     0px;
+    background-color:            transparent;
+    children:                    [ "textbox-prompt-colon", dummy, "prompt"];
+}
+
+dummy {
+    background-color:            transparent;
+}
+
+textbox-prompt-colon {
+    str:                         "";
+    padding:                     5px 10px;
+    background-color:            transparent;
+    text-color:                  @background;
+}
+prompt {
+    padding:                     5px;
+    background-color:            @active;
+    text-color:                  @background;
+}
+
+/*****----- Message -----*****/
+message {
+    padding:                     0px;
+    border-color:                @selected;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+}
+textbox {
+    background-color:            inherit;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    placeholder-color:           @foreground;
+    blink:                       true;
+    markup:                      true;
+}
+error-message {
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+
+/*****----- Listview -----*****/
+listview {
+    columns:                     5;
+    lines:                       1;
+    padding: 0;
+    
+    spacing:                     15px;
+    border-color:                @selected;
+    background-color: @background-alt-2;
+}
+
+/*****----- Elements -----*****/
+element {
+    padding: 6px;
+    spacing:                     0px;
+    border-color:                @selected;
+    background-color:            @background-alt-2;
+}
+element-text {
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+element alternate.normal {
+    background-color:            @background-alt-2;
+}
+element normal.normal {
+    background-color:            @background-alt-2;
+}
+
+element selected.normal {
+    border:                      0px 0px 0px 0px;
+    border-radius:               0px;
+    background-color:            var(selected);
+    text-color:                  var(background);
+}

@@ -1,0 +1,160 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "margin-left": 0,
+    "margin-bottom": 0,
+    "margin-right": 0,
+    "margin-top": 0,
+    "modules-left": [
+        "niri/workspaces",
+        "niri/window",
+        "cava"
+    ],
+    "modules-center": [
+    ],
+    "modules-right": [
+        "tray",
+        "pulseaudio",
+        "pulseaudio#microphone",
+        "battery",
+        "idle_inhibitor",
+        "custom/power",
+        "clock"
+    ],
+    "niri/window": {
+        "format": "{}"
+    },
+    "niri/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": false,
+        "show-special": true,
+        "on-scroll-up": "hyprctl dispatch workspace m-1",
+        "on-scroll-down": "hyprctl dispatch workspace m+1",
+        "on-click": "activate",
+        "sort-by-number": true
+    },
+    "idle_inhibitor": {
+        "tooltip": false,
+        "format": "{icon}",
+        "start-activated": false,
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        }
+    },
+    "custom/weather": {
+        "tooltip": true,
+        "format": "{}",
+        "interval": 30,
+        "exec": "~/.config/waybar/scripts/waybar-wttr.py",
+        "return-type": "json"
+    },
+    "tray": {
+        "icon-size": 12,
+        "spacing": 10
+    },
+    "clock": {
+        "timezone": "Europe/London",
+        "format": "{:%d/%m %R}",
+        "tooltip-format": "<span><tt>{calendar}</tt></span>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "format": {
+                "months": "<span color='#504945'><b>{}</b></span>",
+                "days": "<span color='#ebdbb2'><b>{}</b></span>",
+                "weeks": "<span color='#928374'><b>W{}</b></span>",
+                "weekdays": "<span color='#7c6f64'><b>{}</b></span>",
+                "today": "<span color='#d79921'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "~/.config/rofi/menu/powermenu.sh"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "tooltip": false,
+        "format-muted": " Muted",
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -i 2",
+        "on-scroll-down": "pamixer -d 2",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        }
+    },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": "{volume}%  ",
+        "tooltip": false,
+        "format-source-muted": " Muted",
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 2",
+        "on-scroll-down": "pamixer --default-source -d 2",
+        "scroll-step": 5
+    },
+    "cava": {
+        "framerate": 40,
+        "autosens": 0,
+        "sensitivity": 38,
+        "bars": 18,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 12000,
+        "method": "pulse",
+        "hide_on_silence": false,
+        "sleep_timer": 5,
+        "source": "auto",
+        "stereo": false,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.77,
+        "input_delay": 0,
+        "format-icons": [
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ],
+        "actions": {
+            "on-click-right": "mode"
+        }
+    },
+    "battery": {
+    "format": "({capacity}% {icon})",
+    // "format-discharging": "{icon}",
+    // "format-charging": "{icon}",
+    "format-plugged": "({capacity}% )",
+    "format-icons": {
+      "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "format-full": "󰂅",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "interval": 5,
+    "on-click": "notify-send 'sybau'",
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
+  },
+}
