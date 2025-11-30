@@ -3,7 +3,7 @@ vim.pack.add({
     "https://github.com/echasnovski/mini.pick", -- like telescope stuff
     "https://github.com/folke/which-key.nvim",  -- tell me what key
     "https://github.com/lambdalisue/vim-suda",  -- save as sudo if i forgor, doesnt need setup
-    -- "https://github.com/andergrim/vim-niri-nav", -- navigate vim & niri with niri keys
+    "https://github.com/andergrim/vim-niri-nav", -- navigate vim & niri with niri keys
 })
 
 -- require('vim-niri-nav').setup()
