@@ -9,8 +9,7 @@
     enable = true;
 
     shellAliases = {
-      nswitch =
-        "doas /run/current-system/sw/bin/nixos-rebuild switch --flake ~/nix#$(uname -n)";
+      nswitch = "nixos-rebuild switch --flake ~/nix#$(uname -n) sudo";
       gg = "cd ../";
       htop = "btop";
       cat = "bat";
