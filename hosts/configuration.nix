@@ -121,6 +121,7 @@
 
     {
       users = [ "yari" ];
+      setEnv = [ "HOME" ];
       cmd = "/run/current-system/sw/bin/nixos-rebuild";
       keepEnv = true;
       noPass = true;
