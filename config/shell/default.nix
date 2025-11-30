@@ -9,7 +9,7 @@
     enable = true;
 
     shellAliases = {
-      nswitch = "nh os switch ~/nix -H ${host}";
+      ns = "nh os switch ~/nix -H ${host}";
       gg = "cd ../";
       htop = "btop";
       cat = "bat";

@@ -10,5 +10,6 @@
  **/
 
 * {
-    font: "Sarasa Term J Nerd Font";
+    font-family: "Sarasa Term J Nerd Font";
 }
+
