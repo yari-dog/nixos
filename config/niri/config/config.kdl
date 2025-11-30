@@ -13,6 +13,13 @@ output "HDMI-A-2" {
     position x=440 y=0
 }
 
+input {
+    touchpad {
+        tap
+        natural-scroll
+    }
+}
+
 layout {
     gaps 2
 
