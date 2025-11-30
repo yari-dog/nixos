@@ -109,24 +109,14 @@
   services.udisks2.enable = true;
 
   security.doas.enable = true;
-  security.sudo.enable = true;
+  security.sudo.enable = false;
 
-  security.doas.extraRules = [
-    {
-      users = [ "yari" ];
-      setEnv = [ "LANG" "LC_ALL" "PATH" "HOME" ];
-      keepEnv = true;
-      persist = true;
-    }
-
-    {
-      users = [ "yari" ];
-      setEnv = [ "HOME" ];
-      cmd = "/run/current-system/sw/bin/nixos-rebuild";
-      keepEnv = true;
-      noPass = true;
-    }
-  ];
+  security.doas.extraRules = [{
+    users = [ "yari" ];
+    setEnv = [ "LANG" "LC_ALL" "PATH" "HOME" ];
+    keepEnv = true;
+    persist = true;
+  }];
 
   security.polkit.enable = true;
   systemd = {
@@ -179,6 +169,8 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+
+  programs.nh = { enable = true; };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

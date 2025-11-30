@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, host, ... }:
 
 {
   programs.starship.enable = true;
@@ -9,18 +9,19 @@
     enable = true;
 
     shellAliases = {
-      nswitch = "nixos-rebuild switch --flake ~/nix#$(uname -n) sudo";
+      nswitch = "nh os switch ~/nix -H ${host}";
       gg = "cd ../";
       htop = "btop";
       cat = "bat";
       fuck = "f";
-      sudo = "doas";
     };
 
     profileExtra = ''
       eval $(starship init zsh)
 
       eval $(pay-respects zsh)
+
+      NH_OS_FLAKE="/home/yari/nix"
     '';
   };
 
