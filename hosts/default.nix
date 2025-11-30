@@ -44,7 +44,7 @@ in {
       host = { hostName = "yifftop"; };
     };
     modules = [
-      ./yiff
+      ./legion
       ./configuration.nix
       nixos-hardware.nixosModules.lenovo-legion-15ach6h-hybrid
       nixpkgs-xr.nixosModules.nixpkgs-xr
@@ -71,7 +71,7 @@ in {
       host = { hostName = "yiffpad"; };
     };
     modules = [
-      ./yiff
+      ./t420s
       ./configuration.nix
       nixos-hardware.nixosModules.lenovo-thinkpad-t420
       nixpkgs-xr.nixosModules.nixpkgs-xr
