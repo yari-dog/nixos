@@ -20,8 +20,6 @@
       eval $(starship init zsh)
 
       eval $(pay-respects zsh)
-
-      NH_OS_FLAKE="/home/yari/nix"
     '';
   };
 
