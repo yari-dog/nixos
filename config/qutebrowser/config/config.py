@@ -10,7 +10,7 @@ c.hints.chars = "arstgmneio"
 c.input.mode_override = "normal"
 c.input.spatial_navigation = False
 
-c.qt.workarounds.disable_hangouts_extension = False
+# c.qt.workarounds.disable_hangouts_extension = False
 
 c.scrolling.bar = "when-searching"
 c.scrolling.smooth = False
