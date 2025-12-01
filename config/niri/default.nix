@@ -4,10 +4,11 @@
   home.packages = with pkgs; [ xwayland-satellite alacritty ];
 
   # home.file."${host}".source = ./config/${host};
-  home.file.".config/niri/host" = {
-    source = ./config/${host};
+  home.file.".config/niri/host".source = ./config/${host};
+  home.file.".config/niri/config.kdl".source = ./config/config.kdl;
+  home.file.".config/niri/base" = {
+    source = ./config/base;
     recursive = true;
   };
-  home.file.".config/niri".source = ./config;
-  home.file.".local/bin/vim-niri-nav".source = ./config/vim-niri-nav;
+  home.file.".config/niri/vim-niri-nav".source = ./config/vim-niri-nav;
 }

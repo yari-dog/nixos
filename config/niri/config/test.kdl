@@ -1,3 +1,0 @@
-binds {
-    Mod+Shift+B { power-off-monitors; }
-}
