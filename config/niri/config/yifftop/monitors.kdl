@@ -1,0 +1,5 @@
+output "eDP-1" {
+    mode "1920x1080@119.92"
+    scale 1
+    focus-at-startup
+}

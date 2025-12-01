@@ -1,5 +1,5 @@
 { inputs, nixpkgs, nixpkgs-xr, home-manager, neovim-nightly-overlay
-, nixos-hardware, ... }:
+, nixos-hardware, millennium, ... }:
 
 let
   system = "x86_64-linux";
@@ -52,7 +52,7 @@ in {
       {
         nixpkgs.overlays = [
           neovim-nightly-overlay.overlays.default
-          # millennium.overlays.default
+          millennium.overlays.default
         ];
         home-manager = {
           useGlobalPkgs = true;

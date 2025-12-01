@@ -10,14 +10,14 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
-    # millennium.url = "git+https://github.com/SteamClientHomebrew/Millennium";
+    millennium.url = "git+https://github.com/SteamClientHomebrew/Millennium";
   };
   outputs = inputs@{ self, nixpkgs, nixpkgs-xr, home-manager
-    , neovim-nightly-overlay, nixos-hardware }: {
+    , neovim-nightly-overlay, nixos-hardware, millennium }: {
       nixosConfigurations = (import ./hosts {
         inherit (nixpkgs) lib;
         inherit inputs nixpkgs nixpkgs-xr home-manager nixos-hardware
-          neovim-nightly-overlay;
+          neovim-nightly-overlay millennium;
       });
     };
 }
