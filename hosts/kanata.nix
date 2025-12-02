@@ -49,7 +49,7 @@
            met1 (tap-hold $tap-time $hold-time v lmet)
            met2 (tap-hold $tap-time $hold-time n rmet)
            alt1 (tap-hold $tap-time $hold-time x lalt)
-           alt2 (tap-hold $tap-time $hold-time Period lalt)
+           alt2 (tap-hold $tap-time $hold-time Comma lalt)
            ctl1 (tap-hold $tap-time $hold-time z lctl)
            ctl2 (tap-hold $tap-time $hold-time Period rctl)
            sft1 (tap-hold $tap-time $hold-time IntlBackslash lsft)
