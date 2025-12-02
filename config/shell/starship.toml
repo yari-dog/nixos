@@ -26,13 +26,13 @@ style = "green"
 format = "[$path]($style)"
 
 [username]
-style_user = "green"
+style_user = "bold green"
 style_root = ""
 format = "[$user]($style)"
 show_always = true
 
 [hostname]
-style = "white"
+style = "bold white"
 ssh_only = false
 format = "[$hostname]($style)"
 
