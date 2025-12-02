@@ -2,7 +2,7 @@ vim.pack.add({ "https://github.com/f4z3r/gruvbox-material.nvim" }) -- theme
 local colors = require("gruvbox-material.colors").get(vim.o.background, "medium")
 require('gruvbox-material').setup({
     customize = function(g, o)
-        if g == "@type.variable" then
+        if g == "@variable" then
             o.link = nil
             o.fg = colors.fg0
         elseif g == "@keyword" or g == "@keyword.conditional" or g == "@conditional" or g == "@directive" then
@@ -13,6 +13,9 @@ require('gruvbox-material').setup({
             o.link = nil
             o.fg = colors.yellow
             o.italic = true
+        elseif g == "@module" then
+            o.link = nil
+            o.fg = colors.fg0
         end
 
 
