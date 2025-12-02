@@ -1,5 +1,13 @@
-{ inputs, nixpkgs, nixpkgs-xr, home-manager, neovim-nightly-overlay
-, nixos-hardware, millennium, ... }:
+{
+  inputs,
+  nixpkgs,
+  nixpkgs-xr,
+  home-manager,
+  neovim-nightly-overlay,
+  nixos-hardware,
+  millennium,
+  ...
+}:
 
 let
   system = "x86_64-linux";
@@ -10,12 +18,15 @@ let
   };
 
   lib = nixpkgs.lib;
-in {
+in
+{
   yiff = lib.nixosSystem {
     inherit system;
     specialArgs = {
       inherit inputs system;
-      host = { hostName = "yiff"; };
+      host = {
+        hostName = "yiff";
+      };
     };
     modules = [
       ./yiff
@@ -25,7 +36,7 @@ in {
       {
         nixpkgs.overlays = [
           neovim-nightly-overlay.overlays.default
-          # millennium.overlays.default
+          millennium.overlays.default
         ];
         home-manager = {
           useGlobalPkgs = true;
@@ -41,7 +52,9 @@ in {
     inherit system;
     specialArgs = {
       inherit inputs system;
-      host = { hostName = "yifftop"; };
+      host = {
+        hostName = "yifftop";
+      };
     };
     modules = [
       ./legion
@@ -68,7 +81,9 @@ in {
     inherit system;
     specialArgs = {
       inherit inputs system;
-      host = { hostName = "yiffpad"; };
+      host = {
+        hostName = "yiffpad";
+      };
     };
     modules = [
       ./t420s
