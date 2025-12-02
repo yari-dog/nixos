@@ -48,3 +48,5 @@ config.bind("S", "cmd-set-text -s :open -t", mode="normal")
 
 
 config.bind("<Ctrl-.>", "spawn --userscript qute-bitwarden --totp", mode="normal")
+
+config.bind(",d", "config-cycle colors.webpage.darkmode.enabled true false")

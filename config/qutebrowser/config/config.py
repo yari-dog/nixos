@@ -5,8 +5,6 @@ config.load_autoconfig()
 c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.preferred_color_scheme = "dark"
 c.colors.webpage.darkmode.policy.images = "never"
-c.colors.webpage.darkmode.threshold.background = 32
-
 
 c.downloads.position = "bottom"
 c.downloads.remove_finished = 600000  # 10 minutes
