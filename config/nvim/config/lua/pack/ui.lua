@@ -1,33 +1,44 @@
-vim.pack.add({ "https://github.com/f4z3r/gruvbox-material.nvim" }) -- theme
-local colors = require("gruvbox-material.colors").get(vim.o.background, "medium")
-require('gruvbox-material').setup({
-    customize = function(g, o)
-        if g == "@variable" or g == "@property" then
-            if g == "@property" then
-                o.italic = true
-            end
-            o.link = nil
-            o.fg = colors.fg0
-        elseif g == "@keyword" or g == "@keyword.conditional" or g == "@conditional" or g == "@directive" then
-            o.link = nil
-            o.fg = colors.red
-            o.italic = true
-        elseif g == "@type" then
-            o.link = nil
-            o.fg = colors.yellow
-            o.italic = true
-        elseif g == "@module" then
-            o.link = nil
-            o.fg = colors.fg0
-        end
+-- vim.pack.add({ "https://github.com/f4z3r/gruvbox-material.nvim" }) -- theme
+-- local colors = require("gruvbox-material.colors").get(vim.o.background, "medium")
+-- require('gruvbox-material').setup({
+--     customize = function(g, o)
+--         if g == "@variable" or g == "@property" then
+--             if g == "@property" then
+--                 o.italic = true
+--             end
+--             o.link = nil
+--             o.fg = colors.fg0
+--         elseif g == "@keyword" or g == "@keyword.conditional" or g == "@conditional" or g == "@directive" then
+--             o.link = nil
+--             o.fg = colors.red
+--             o.italic = true
+--         elseif g == "@type" then
+--             o.link = nil
+--             o.fg = colors.yellow
+--             o.italic = true
+--         elseif g == "@module" then
+--             o.link = nil
+--             o.fg = colors.fg0
+--         end
+--
+--
+--         -- set variables ONLY to bold
+--         vim.api.nvim_set_hl(0, '@lsp.type.variable', { fg = colors.fg0, bold = true })
+--         return o
+--     end,
+-- })
+-- vim.cmd.colorscheme 'gruvbox-material'
 
-
-        -- set variables ONLY to bold
-        vim.api.nvim_set_hl(0, '@lsp.type.variable', { fg = colors.fg0, bold = true })
-        return o
-    end,
+vim.pack.add({ "https://github.com/ellisonleao/gruvbox.nvim" })
+require("gruvbox").setup({
+    overrides = {
+        ["@lsp.type.variable"] = { bold = true },
+        ["@property"] = { bold = true, fg = "#ebdbb2", italic = true },
+        ["@lsp.type.const"] = { bold = true }
+    }
 })
-vim.cmd.colorscheme 'gruvbox-material'
+vim.o.background = "dark"
+vim.cmd([[colorscheme gruvbox]])
 
 vim.pack.add({
     "https://github.com/sphamba/smear-cursor.nvim", -- make cursor into sludge
