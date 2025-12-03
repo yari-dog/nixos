@@ -33,8 +33,13 @@ vim.pack.add({ "https://github.com/ellisonleao/gruvbox.nvim" })
 require("gruvbox").setup({
     overrides = {
         ["@lsp.type.variable"] = { bold = true },
-        ["@property"] = { bold = true, fg = "#ebdbb2", italic = true },
-        ["@lsp.type.const"] = { bold = true }
+        ["@property"] = { fg = "#ebdbb2", italic = true },
+        ["@variable.member"] = { fg = "#ebdbb2", italic = true },
+        ["@lsp.type.const"] = { bold = true },
+        ["@string"] = { fg = "#8ec07c", italic = true },
+        ["@punctuation.bracket"] = { link = "GruvboxFg1" },
+        ["@punctuation.delimiter"] = { link = "GruvboxFg1" },
+        ["@constructor"] = { link = "GruvboxFg1" }
     }
 })
 vim.o.background = "dark"
