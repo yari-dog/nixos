@@ -56,8 +56,8 @@
            sft2 (tap-hold $tap-time $hold-time Slash rsft)
           )
           (defvar
-          tap-time 160
-          hold-time 160
+          tap-time 170
+          hold-time 170
           )
           (defchordsv2
             (q w) esc $tap-time all-released ()
