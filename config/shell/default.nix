@@ -1,4 +1,9 @@
-{ inputs, pkgs, host, ... }:
+{
+  inputs,
+  pkgs,
+  host,
+  ...
+}:
 
 {
   programs.starship.enable = true;
@@ -14,6 +19,7 @@
       htop = "btop";
       cat = "bat";
       fuck = "f";
+      nix-shell = "nix-shell --command zsh";
     };
 
     profileExtra = ''

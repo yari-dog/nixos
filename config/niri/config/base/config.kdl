@@ -66,6 +66,7 @@ environment {
 }
 
 spawn-at-startup "waybar"
+spawn-at-startup "bitwarden"
 
 hotkey-overlay {
     skip-at-startup

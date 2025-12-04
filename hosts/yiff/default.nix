@@ -3,6 +3,13 @@
 {
   imports = [ ./hardware-configuration.nix ];
 
+  hardware.graphics.extraPackages = with pkgs; [
+    # rocmPackages.clr.icd
+    mesa.opencl
+  ];
+
+  hardware.amdgpu.opencl.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -30,5 +37,8 @@
     libsurvive
     basalt-monado
     wayvr-dashboard
+    davinci-resolve
+    ffmpeg
+    # clinfo
   ];
 }
