@@ -10,8 +10,8 @@
 #   { if = "!dir", text = "" },
 # ]
 #
-[flavor]
-dark = "gruvbox-dark"
+# [flavor]
+# dark = "gruvbox-dark"
 # vim:fileencoding=utf-8:foldmethod=marker
 
 # : Manager {{{
