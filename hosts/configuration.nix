@@ -89,7 +89,7 @@
 
   # # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+  # services.desktopManager.gnome.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -236,6 +236,8 @@
 
     # for qute autofil
     keyutils
+
+    qbittorrent
   ];
 
   hardware.keyboard.qmk.enable = true;

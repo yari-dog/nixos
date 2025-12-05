@@ -1,5 +1,7 @@
 config.load_autoconfig()
 
+config.source("custom/gruvbox.py")
+config.source("custom/keymaps/colemak-dh.py")
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 c.colors.webpage.darkmode.enabled = True
@@ -42,8 +44,3 @@ config.set(
 )
 
 c.content.cookies.accept = "no-3rdparty"
-
-c.content.javascript.clipboard = True
-
-config.source("custom/gruvbox.py")
-config.source("custom/keymaps/colemak-dh.py")

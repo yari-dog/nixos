@@ -1,0 +1,72 @@
+[mgr]
+prepend_keymap = [
+  { on = ["i"], run = "arrow -1" },
+  { on = ["e"], run = "arrow 1" },
+  { on = ["m"], run = "arrow -5" },
+  { on = ["k"], run = "arrow 5" },
+  { on = ["n"], run = "leave" },  # Go back to the parent directory.
+  { on = ["N"], run = "back" },  # Go back to the previous directory.
+  { on = ["o"], run = "enter" },  # Enter the child directory.
+  { on = ["O"], run = "forward" },  # Go forward to the next directory.
+  { on = ["<C-u>"], run = "seek -5" },
+  { on = ["<C-e>"], run = "seek 5" },
+  { on = ["-"], run = "find_arrow" },
+  { on = ["="], run = "find_arrow --previous" },
+  # { on = ["q", "q"], run = "escape" },
+  { on = ["b", "k"], run = "close" },
+]
+
+[tasks]
+prepend_keymap = [
+  { on = ["W"], run = "close" },
+  { on = ["i"], run = "arrow -1" },
+  { on = ["e"], run = "arrow 1" },
+  # { on = ["q", "q"], run = "escape" },
+]
+
+[spot]
+prepend_keymap = [
+  # { on = ["q", "q"], run = "escape" },
+]
+
+[pick]
+prepend_keymap = [
+  # { on = ["q", "q"], run = "escape" },
+]
+
+[input]
+prepend_keymap = [
+  { on = ["t"], run = "insert" },
+  { on = ["<C-n>"], run = "move -999" },
+  { on = ["<C-o>"], run = "move 999" },
+  { on = ["<C-N>"], run = ["move -999", "insert"] },
+  { on = ["<C-O>"], run = ["move 999", "insert --append"] },
+  { on = ["<A-n>"], run = "move -1" },
+  { on = ["<A-o>"], run = "move 1" },
+  { on = ["h"], run = "forward --end-of-word" },
+  { on = ["x"], run = ["delete", "move 1 --in-operating"] },
+  { on = ["u"], run = "undo" },
+  { on = ["U"], run = "redo" },
+  # { on = ["q", "q"], run = "escape" },
+]
+
+[confirm]
+prepend_keymap = [
+  # { on = ["q", "q"], run = "escape" },
+]
+
+[completion]
+prepend_keymap = [
+  { on = ["<C-i>"], run = "arrow -1" },
+  { on = ["<C-e>"], run = "arrow 1" },
+  # { on = ["q", "q"], run = "escape" },
+]
+
+[help]
+prepend_keymap = [
+  { on = ["i"], run = "arrow -1" },
+  { on = ["e"], run = "arrow 1" },
+  { on = ["m"], run = "arrow -5" },
+  { on = ["k"], run = "arrow 5" },
+  # { on = ["q", "q"], run = "escape" },
+]

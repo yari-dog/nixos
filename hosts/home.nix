@@ -17,6 +17,8 @@
 
   services.trayscale.enable = true;
 
+  # services.minecraft-server.enable = true;
+
   home.packages = with pkgs; [
     neovim
     ripgrep
@@ -29,6 +31,7 @@
     foot
     lua-language-server
     legcord
+    prismlauncher
   ];
 
   home.pointerCursor = {
@@ -39,7 +42,18 @@
     x11.enable = true;
   };
 
-  services.udiskie = { enable = true; };
+  gtk = {
+    enable = true;
+    colorScheme = "dark";
+    theme = {
+      name = "gruvbox-dark-gtk";
+      package = pkgs.gruvbox-dark-gtk;
+    };
+  };
+
+  services.udiskie = {
+    enable = true;
+  };
 
   imports = [ ../config/default.nix ];
   # For Monado:

@@ -85,7 +85,7 @@ $reboot)
     run_cmd --reboot
     ;;
 $lock)
-    pidof hyprlock || hyprlock
+    swaylock --daemonize
     ;;
 $suspend)
     run_cmd --suspend

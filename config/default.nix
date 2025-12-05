@@ -10,6 +10,8 @@
     ./font
     ./niri
     ./nvim
+    ./yazi
+    ./xdg
     # ./steam
   ];
 }

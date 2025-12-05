@@ -5,6 +5,7 @@ binds {
     Mod+Semicolon hotkey-overlay-title="Run an Application: rofi" { spawn-sh "~/.config/rofi/menu/launcher.sh"; }
     Mod+W hotkey-overlay-title="Run an Application: qutebrowser" { spawn "qutebrowser"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+L hotkey-overlay-title="Lock dialog" { spawn-sh "~/.config/rofi/menu/powermenu.sh"; }
 
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 

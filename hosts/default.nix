@@ -6,6 +6,7 @@
   neovim-nightly-overlay,
   nixos-hardware,
   millennium,
+  yazi,
   ...
 }:
 
@@ -37,6 +38,7 @@ in
         nixpkgs.overlays = [
           neovim-nightly-overlay.overlays.default
           millennium.overlays.default
+          yazi.overlays.default
         ];
         home-manager = {
           useGlobalPkgs = true;
@@ -66,6 +68,7 @@ in
         nixpkgs.overlays = [
           neovim-nightly-overlay.overlays.default
           millennium.overlays.default
+          yazi.overlays.default
         ];
         home-manager = {
           useGlobalPkgs = true;
@@ -95,6 +98,7 @@ in
         nixpkgs.overlays = [
           neovim-nightly-overlay.overlays.default
           # millennium.overlays.default
+          yazi.overlays.default
         ];
         home-manager = {
           useGlobalPkgs = true;
