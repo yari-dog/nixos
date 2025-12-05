@@ -233,6 +233,9 @@
     trayscale
 
     lutris
+
+    # for qute autofil
+    keyutils
   ];
 
   hardware.keyboard.qmk.enable = true;
