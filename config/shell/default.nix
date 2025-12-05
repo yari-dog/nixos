@@ -1,14 +1,12 @@
-{
-  inputs,
-  pkgs,
-  host,
-  ...
-}:
+{ inputs, pkgs, host, ... }:
 
 {
   programs.starship.enable = true;
 
   programs.pay-respects.enable = true;
+
+  programs.fzf.enable = true;
+  programs.fzf.enableZshIntegration = true;
 
   programs.zsh = {
     enable = true;
@@ -22,11 +20,11 @@
       nix-shell = "nix-shell --command zsh";
     };
 
-    profileExtra = ''
-      eval $(starship init zsh)
-
-      eval $(pay-respects zsh)
-    '';
+    sessionVariables = rec { EDITOR = "nvim"; };
+    syntaxHighlighting.enable = true;
+    historySubstringSearch.enable = true;
+    autosuggestion.enable = true;
+    history.ignoreAllDups = true;
   };
 
   programs.fastfetch = {
