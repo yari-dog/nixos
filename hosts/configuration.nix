@@ -19,6 +19,12 @@
   nixpkgs.config.allowUnfree = true;
   hardware.firmware = [ pkgs.linux-firmware ];
 
+  console = {
+    enable = true;
+    earlySetup = true;
+  };
+  services.kmscon.enable = true;
+
   networking.hostName = host.hostName; # Define your hostname.
 
   # Bootloader.
@@ -88,8 +94,10 @@
   services.xserver.enable = true;
 
   # # Enable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = true;
+  # services.displayManager.gdm.enable = true;
   # services.desktopManager.gnome.enable = true;
+
+  services.displayManager.ly.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -152,7 +160,15 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  programs.bash.enable = true;
   programs.zsh.enable = true;
+  programs.zsh.loginShellInit = ''
+
+    eval $(starship init zsh)
+
+    eval $(pay-respects zsh)
+  '';
+  programs.zsh.zsh-autoenv.enable = true;
   programs.niri.enable = true;
 
   programs.steam = {
