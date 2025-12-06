@@ -27,6 +27,7 @@
 
   home.sessionVariables.TERMCMD = "foot";
   home.sessionVariables.TERMINAL = "foot";
+  home.sessionVariables.EDITOR = "nvim";
 
   xdg.configFile."xdg-desktop-portal-termfilechooser/config" = {
     force = true;
