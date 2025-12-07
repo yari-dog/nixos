@@ -32,6 +32,7 @@
     lua-language-server
     legcord
     prismlauncher
+    ghidra
   ];
 
   home.pointerCursor = {

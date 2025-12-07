@@ -2,7 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, host, ... }:
+{
+  config,
+  pkgs,
+  host,
+  ...
+}:
 
 {
   hardware.graphics = {
@@ -51,8 +56,10 @@
     settings = {
       auto-optimise-store = true;
       max-jobs = "auto";
-      substituters =
-        [ "https://nix-community.cachix.org" "https://cache.nixos.org/" ];
+      substituters = [
+        "https://nix-community.cachix.org"
+        "https://cache.nixos.org/"
+      ];
     };
   };
 
@@ -119,12 +126,19 @@
   security.doas.enable = true;
   security.sudo.enable = false;
 
-  security.doas.extraRules = [{
-    users = [ "yari" ];
-    setEnv = [ "LANG" "LC_ALL" "PATH" "HOME" ];
-    keepEnv = true;
-    persist = true;
-  }];
+  security.doas.extraRules = [
+    {
+      users = [ "yari" ];
+      setEnv = [
+        "LANG"
+        "LC_ALL"
+        "PATH"
+        "HOME"
+      ];
+      keepEnv = true;
+      persist = true;
+    }
+  ];
 
   security.polkit.enable = true;
   systemd = {
@@ -135,8 +149,7 @@
       after = [ "graphical-session.target" ];
       serviceConfig = {
         Type = "simple";
-        ExecStart =
-          "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
         Restart = "on-failure";
         RestartSec = 1;
         TimeoutStopSec = 10;
@@ -164,9 +177,12 @@
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     extraCompatPackages = with pkgs; [ proton-ge-rtsp-bin ];
-    extraPackages = with pkgs; [ SDL2 gtk3 mono ];
-    package =
-      pkgs.steam-millennium; # If on rebuild you get hash related errors, you should run nix flake update millennium command in terminal to download newest git commits for millennium.
+    extraPackages = with pkgs; [
+      SDL2
+      gtk3
+      mono
+    ];
+    package = pkgs.steam-millennium; # If on rebuild you get hash related errors, you should run nix flake update millennium command in terminal to download newest git commits for millennium.
   };
 
   systemd.services.nixos-upgrade.path = [ pkgs.git ];
@@ -175,18 +191,22 @@
   users.users.yari = {
     isNormalUser = true;
     description = "yari";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs;
-      [
-        #  thunderbird
-      ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = with pkgs; [
+      #  thunderbird
+    ];
     shell = pkgs.zsh;
   };
 
   # Install firefox.
   programs.firefox.enable = true;
 
-  programs.nh = { enable = true; };
+  programs.nh = {
+    enable = true;
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -222,6 +242,8 @@
 
     vial
     qmk
+    dos2unix
+    pkgsCross.avr.buildPackages.gcc
 
     wine
     pwvucontrol
@@ -276,7 +298,10 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   system.stateVersion = "25.05"; # Did you read the comment?
   # system.autoUpgrade.enable = true;
 
