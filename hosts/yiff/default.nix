@@ -6,16 +6,16 @@
   hardware.amdgpu.initrd.enable = true;
 
   boot.kernelParams = [
-    "video=DP-2:3440x1440@75.050"
-    "video=HDMI-A-2:2560x1080@60,rotate=180"
+    "video=DP-1:3440x1440@75.050"
+    "video=HDMI-A-3:2560x1080@60,rotate=180"
   ];
 
-  hardware.graphics.extraPackages = with pkgs; [
-    # rocmPackages.clr.icd
-    mesa.opencl
-  ];
-
-  hardware.amdgpu.opencl.enable = true;
+  # hardware.graphics.extraPackages = with pkgs; [
+  #   # rocmPackages.clr.icd
+  #   mesa.opencl
+  # ];
+  #
+  # hardware.amdgpu.opencl.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -44,8 +44,6 @@
     libsurvive
     basalt-monado
     wayvr-dashboard
-    davinci-resolve
-    ffmpeg
     # clinfo
   ];
 }

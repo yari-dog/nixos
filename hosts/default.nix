@@ -7,6 +7,7 @@
   nixos-hardware,
   millennium,
   yazi,
+  nixos-xivlauncher-rb,
   ...
 }:
 
@@ -34,6 +35,7 @@ in
       ./configuration.nix
       nixpkgs-xr.nixosModules.nixpkgs-xr
       home-manager.nixosModules.home-manager
+      nixos-xivlauncher-rb.nixosModules.default
       {
         nixpkgs.overlays = [
           neovim-nightly-overlay.overlays.default

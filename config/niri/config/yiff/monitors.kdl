@@ -1,4 +1,4 @@
-output "DP-2" {
+output "DP-1" {
     mode "3440x1440@75.050"
     scale 1
     position x=0 y=1080
@@ -6,7 +6,7 @@ output "DP-2" {
     focus-at-startup
 }
 
-output "HDMI-A-2" {
+output "HDMI-A-3" {
     mode "2560x1080@60"
     scale 1
     transform "180"

@@ -12,6 +12,10 @@
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
     millennium.url = "git+https://github.com/SteamClientHomebrew/Millennium";
     yazi.url = "github:sxyazi/yazi";
+    nixos-xivlauncher-rb = {
+      url = "github:The1Penguin/nixos-xivlauncher-rb";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     inputs@{
@@ -23,6 +27,7 @@
       nixos-hardware,
       millennium,
       yazi,
+      nixos-xivlauncher-rb,
     }:
     {
       nixosConfigurations = (
@@ -37,6 +42,7 @@
             neovim-nightly-overlay
             millennium
             yazi
+            nixos-xivlauncher-rb
             ;
         }
       );

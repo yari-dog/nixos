@@ -256,6 +256,8 @@
     keyutils
 
     qbittorrent
+
+    xivlauncher-rb
   ];
 
   hardware.keyboard.qmk.enable = true;

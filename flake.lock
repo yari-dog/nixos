@@ -184,6 +184,26 @@
         "type": "github"
       }
     },
+    "nixos-xivlauncher-rb": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1765020164,
+        "narHash": "sha256-aki/Em/1kF4HAR7ykUJ+llwtDEfm7+d7gXX756pxD9k=",
+        "owner": "The1Penguin",
+        "repo": "nixos-xivlauncher-rb",
+        "rev": "cb718b1237597d6388dced5d43d25d4bd6f24d60",
+        "type": "github"
+      },
+      "original": {
+        "owner": "The1Penguin",
+        "repo": "nixos-xivlauncher-rb",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1750506804,
@@ -306,6 +326,7 @@
         "millennium": "millennium",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nixos-hardware": "nixos-hardware",
+        "nixos-xivlauncher-rb": "nixos-xivlauncher-rb",
         "nixpkgs": "nixpkgs_3",
         "nixpkgs-xr": "nixpkgs-xr",
         "yazi": "yazi"
