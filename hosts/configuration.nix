@@ -194,6 +194,12 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "video"
+      "audio"
+      "games"
+      "sys"
+      "disk"
+      "storage"
     ];
     packages = with pkgs; [
       #  thunderbird
