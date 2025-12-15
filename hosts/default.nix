@@ -1,15 +1,5 @@
-{
-  inputs,
-  nixpkgs,
-  nixpkgs-xr,
-  home-manager,
-  neovim-nightly-overlay,
-  nixos-hardware,
-  millennium,
-  yazi,
-  nixos-xivlauncher-rb,
-  ...
-}:
+{ inputs, nixpkgs, nixpkgs-xr, home-manager, neovim-nightly-overlay
+, nixos-hardware, millennium, yazi, nixos-xivlauncher-rb, ... }:
 
 let
   system = "x86_64-linux";
@@ -20,15 +10,12 @@ let
   };
 
   lib = nixpkgs.lib;
-in
-{
+in {
   yiff = lib.nixosSystem {
     inherit system;
     specialArgs = {
       inherit inputs system;
-      host = {
-        hostName = "yiff";
-      };
+      host = { hostName = "yiff"; };
     };
     modules = [
       ./yiff
@@ -56,9 +43,7 @@ in
     inherit system;
     specialArgs = {
       inherit inputs system;
-      host = {
-        hostName = "yifftop";
-      };
+      host = { hostName = "yifftop"; };
     };
     modules = [
       ./legion
@@ -66,6 +51,7 @@ in
       nixos-hardware.nixosModules.lenovo-legion-15ach6h-hybrid
       nixpkgs-xr.nixosModules.nixpkgs-xr
       home-manager.nixosModules.home-manager
+      nixos-xivlauncher-rb.nixosModules.default
       {
         nixpkgs.overlays = [
           neovim-nightly-overlay.overlays.default
@@ -86,9 +72,7 @@ in
     inherit system;
     specialArgs = {
       inherit inputs system;
-      host = {
-        hostName = "yiffpad";
-      };
+      host = { hostName = "yiffpad"; };
     };
     modules = [
       ./t420s
