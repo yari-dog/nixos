@@ -5,8 +5,10 @@
 
   hardware.amdgpu.initrd.enable = true;
 
-  boot.kernelParams =
-    [ "video=DP-1:3440x1440@75.050" "video=HDMI-A-3:2560x1080@60,rotate=180" ];
+  boot.kernelParams = [
+    "video=DP-1:3440x1440@75.050"
+    "video=HDMI-A-3:2560x1080@60,rotate=180"
+  ];
 
   # hardware.graphics.extraPackages = with pkgs; [
   #   # rocmPackages.clr.icd
@@ -42,7 +44,7 @@
     libsurvive
     basalt-monado
     wayvr-dashboard
-    nixos-xivlauncher-rb
+    xivlauncher-rb
     # clinfo
   ];
 }

@@ -182,7 +182,6 @@
       gtk3
       mono
     ];
-    package = pkgs.steam-millennium; # If on rebuild you get hash related errors, you should run nix flake update millennium command in terminal to download newest git commits for millennium.
   };
 
   systemd.services.nixos-upgrade.path = [ pkgs.git ];

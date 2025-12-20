@@ -10,7 +10,6 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
-    millennium.url = "git+https://github.com/SteamClientHomebrew/Millennium";
     yazi.url = "github:sxyazi/yazi";
     nixos-xivlauncher-rb = {
       url = "github:The1Penguin/nixos-xivlauncher-rb";
@@ -25,7 +24,6 @@
       home-manager,
       neovim-nightly-overlay,
       nixos-hardware,
-      millennium,
       yazi,
       nixos-xivlauncher-rb,
     }:
@@ -40,7 +38,6 @@
             home-manager
             nixos-hardware
             neovim-nightly-overlay
-            millennium
             yazi
             nixos-xivlauncher-rb
             ;
