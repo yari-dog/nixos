@@ -14,6 +14,7 @@
       init.defaultBranch = "main";
     };
   };
+  programs.mpv.enable = true;
 
   services.trayscale.enable = true;
 
