@@ -17,6 +17,7 @@
   programs.mpv.enable = true;
 
   services.trayscale.enable = true;
+  services.gnome-keyring.enable = true;
 
   # services.minecraft-server.enable = true;
 

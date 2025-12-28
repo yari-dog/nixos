@@ -67,9 +67,6 @@ environment {
     _JAVA_AWT_WM_NONREPARENTING "1"
 }
 
-spawn-at-startup "waybar"
-spawn-at-startup "bitwarden"
-
 hotkey-overlay {
     skip-at-startup
 }
@@ -117,3 +114,9 @@ window-rule{
     default-column-width { proportion 0.45; }
     default-window-height { proportion 0.45; }
 }
+
+spawn-at-startup "dbus-update-activation-environment" "--systemd" "--all"
+spawn-at-startup "systemctl" "--user" "import-environment" "DISPLAY" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
+spawn-at-startup "hash dbus-update-activation-environment" "2>/dev/null"
+spawn-at-startup "sh" "-c" "waybar"
+spawn-at-startup "sh" "-c" "bitwarden"

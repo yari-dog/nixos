@@ -6,6 +6,7 @@
   config,
   pkgs,
   host,
+  inputs,
   ...
 }:
 
@@ -140,6 +141,8 @@
     }
   ];
 
+  security.pam.services.swaylock = { };
+  security.pam.services.login.enableGnomeKeyring = true;
   security.polkit.enable = true;
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
@@ -261,11 +264,14 @@
     keyutils
 
     qbittorrent
+    gamemode
 
-    xivlauncher-rb
+    (xivlauncher-rb.override { useGameMode = true; })
 
     libimobiledevice
     ifuse
+    remmina
+    p7zip
   ];
 
   services.mpd.enable = true;

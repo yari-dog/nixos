@@ -9,7 +9,7 @@
   home.packages = with pkgs; [
     xwayland-satellite
     swaylock
-    alacritty
+    playerctl
   ];
 
   home.file.".config/niri/host".source = ./config/${host};
