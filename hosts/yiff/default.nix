@@ -10,12 +10,12 @@
     "video=HDMI-A-3:2560x1080@60,rotate=180"
   ];
 
-  # hardware.graphics.extraPackages = with pkgs; [
-  #   # rocmPackages.clr.icd
-  #   mesa.opencl
-  # ];
+  hardware.graphics.extraPackages = with pkgs; [
+    rocmPackages.clr
+    mesa.opencl
+  ];
   #
-  # hardware.amdgpu.opencl.enable = true;
+  hardware.amdgpu.opencl.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -45,6 +45,6 @@
     basalt-monado
     wayvr-dashboard
     xivlauncher-rb
-    # clinfo
+    clinfo
   ];
 }

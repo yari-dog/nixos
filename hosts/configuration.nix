@@ -202,6 +202,20 @@
       "sys"
       "disk"
       "storage"
+      "render"
+      "podman"
+    ];
+    subGidRanges = [
+      {
+        count = 65536;
+        startGid = 100000;
+      }
+    ];
+    subUidRanges = [
+      {
+        count = 65536;
+        startUid = 100000;
+      }
     ];
     packages = with pkgs; [
       #  thunderbird
@@ -227,6 +241,7 @@
     wl-clipboard
     wl-clip-persist
     nodejs
+    lshw
 
     # lsp
 
@@ -249,9 +264,9 @@
     bitwarden-menu
 
     vial
-    qmk
-    dos2unix
-    pkgsCross.avr.buildPackages.gcc
+    # qmk
+    # dos2unix
+    # pkgsCross.avr.buildPackages.gcc
 
     wine
     pwvucontrol
@@ -272,6 +287,7 @@
     ifuse
     remmina
     p7zip
+    distrobox
   ];
 
   services.mpd.enable = true;
@@ -288,18 +304,24 @@
   };
   services.usbmuxd.enable = true;
 
-  hardware.keyboard.qmk.enable = true;
+  # hardware.keyboard.qmk.enable = true;
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
 
   services.udev = {
     packages = with pkgs; [
 
-      qmk
-      qmk-udev-rules
+      # qmk
+      # qmk-udev-rules
       via
       vial
     ];
     extraRules = ''
-      KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="6964", ATTRS{idProduct}=="0075", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl" 
+            KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="6964", ATTRS{idProduct}=="0075", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl" 
+      SUBSYSTEM=="usb", ATTR{idVendor}=="096e", TAG+="uaccess"
+      SUBSYSTEM=="usb", ATTR{idVendor}=="096e", MODE="0664", GROUP="users"
     '';
   };
 
