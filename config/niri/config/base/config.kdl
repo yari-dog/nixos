@@ -96,20 +96,12 @@ window-rule {
 // Dialogs window rule
 window-rule{
     match app-id="confirm"
-    match app-id="pavucontrol"
-    match app-id="blueman"
-    match app-id="nm-connection-editor"
-    match app-id="org.gnome.PowerStats"
+    match app-id="pwvucontrol"
     match app-id="cpupower"
-    match app-id="rog-control-center"
-    match app-id="jamesdsp"
     match app-id="easyeffects"
-    match app-id="Hello"
     match app-id="xdg-desktop-portal-gtk"
-    match app-id="system-config-printer"
-    match app-id="ghostty_journalctl"
     match title=r#".*Extension.*Bitwarden.*"#
-    match app-id="brave-keep"
+    match title="Friends List" app-id="steam"
     open-floating true
     default-column-width { proportion 0.45; }
     default-window-height { proportion 0.45; }
