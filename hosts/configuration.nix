@@ -166,19 +166,28 @@
     };
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
-  programs.bash.enable = true;
-  programs.zsh.enable = true;
-  programs.zsh.loginShellInit = ''
-
-    eval $(starship init zsh)
-
-    eval $(pay-respects zsh)
-  '';
-  programs.zsh.zsh-autoenv.enable = true;
   programs.niri.enable = true;
+
+  programs.fish = {
+    enable = true;
+
+    shellAliases = {
+      ns = "nh os switch ~/nix -H ${host.hostName}";
+      gg = "cd ../";
+      htop = "btop";
+      cat = "bat";
+      fuck = "f";
+      nix-shell = "nix-shell --command zsh";
+    };
+
+    interactiveShellInit = ''
+      set fish_greeting
+        function last_history_item
+            echo $history[1]
+        end
+        abbr -a !! --position anywhere --function last_history_item
+    '';
+  };
 
   programs.steam = {
     enable = true;
@@ -195,7 +204,6 @@
 
   systemd.services.nixos-upgrade.path = [ pkgs.git ];
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.yari = {
     isNormalUser = true;
     description = "yari";
@@ -226,7 +234,6 @@
     packages = with pkgs; [
       #  thunderbird
     ];
-    shell = pkgs.zsh;
   };
 
   # Install firefox.
@@ -294,6 +301,17 @@
     remmina
     p7zip
     distrobox
+
+    inputs.helium.defaultPackage.${stdenv.hostPlatform.system}
+
+    kdiskmark
+
+    fishPlugins.done
+    fishPlugins.fzf-fish
+    fishPlugins.forgit
+    fzf
+    fishPlugins.grc
+    grc
   ];
 
   services.mpd.enable = true;

@@ -15,6 +15,7 @@
       url = "github:The1Penguin/nixos-xivlauncher-rb";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    helium.url = "github:FKouhai/helium2nix/main";
   };
   outputs =
     inputs@{
@@ -26,6 +27,7 @@
       nixos-hardware,
       yazi,
       nixos-xivlauncher-rb,
+      helium,
     }:
     {
       nixosConfigurations = (
@@ -40,6 +42,7 @@
             neovim-nightly-overlay
             yazi
             nixos-xivlauncher-rb
+            helium
             ;
         }
       );
