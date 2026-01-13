@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  inputs,
   ...
 }:
 
@@ -14,7 +15,7 @@
     settings = {
       user = {
         name = "yari :3";
-        email = "barkbarkbark@yari.dog";
+        email = "yari_dog@protonmail.com";
       };
       init.defaultBranch = "main";
     };
@@ -28,48 +29,28 @@
 
   home.packages = with pkgs; [
     neovim
-    ripgrep
-    gcc
-    cargo
     hyfetch
-    btop
-    bat
-    unzip
     foot
     lua-language-server
     legcord
     prismlauncher
     ghidra
     gruvbox-dark-gtk
+    qbittorrent
+    (xivlauncher-rb.override { useGameMode = true; })
+    inputs.helium.defaultPackage.${stdenv.hostPlatform.system}
+    lutris
   ];
+
+  programs.anki = {
+    enable = true;
+    sync.username = "yari_dog@protonmail.com";
+    sync.keyFile = config.lib.file.mkOutOfStoreSymlink "/home/yari/.ankisecret";
+  };
 
   stylix.targets.neovim.enable = false;
   stylix.targets.starship.enable = false;
   stylix.targets.gtk.enable = false;
-  # stylix.targets.mako.enable = false;
-
-  # stylix = {
-  #   enable = true;
-  #   autoEnable = false;
-  #   base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
-  #   # image = ../../wallpapers/bg.png;
-  #   polarity = "dark";
-  #   cursor = {
-  #     package = pkgs.capitaine-cursors-themed;
-  #     name = "Capitaine Cursors (Gruvbox)";
-  #     size = 32;
-  #   };
-  #   enableReleaseChecks = false;
-  # };
-
-  # home.pointerCursor = {
-  #   package = pkgs.simp1e-cursors;
-  #   name = "Simp1e-Gruvbox-Dark";
-  #   size = 18;
-  #   gtk.enable = true;
-  #   x11.enable = true;
-  # };
-  #
   gtk = {
     enable = true;
     theme = {

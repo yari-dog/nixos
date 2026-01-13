@@ -12,6 +12,5 @@
     ./nvim
     ./yazi
     ./xdg
-    # ./steam
   ];
 }

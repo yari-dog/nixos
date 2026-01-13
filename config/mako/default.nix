@@ -7,7 +7,7 @@
       anchor = "bottom-left";
       layer = "overlay";
       width = 800;
-      height = 32;
+      height = 64;
       margin = 0;
 
       on-button-left = "dismiss";

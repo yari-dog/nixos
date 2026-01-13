@@ -8,9 +8,10 @@
 {
   home.packages = with pkgs; [
     xwayland-satellite
-    swaylock
     playerctl
   ];
+
+  programs.swaylock.enable = true;
 
   home.file.".config/niri/host".source = ./config/${host};
   home.file.".config/niri/config.kdl".source = ./config/config.kdl;

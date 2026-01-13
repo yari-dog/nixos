@@ -48,7 +48,10 @@ in
           useUserPackages = true;
           users.yari = import ./home.nix;
           backupFileExtension = "backup";
-          extraSpecialArgs.host = "yiff";
+          extraSpecialArgs = {
+            inherit inputs;
+            host = "yiff";
+          };
         };
       }
     ];

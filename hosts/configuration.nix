@@ -283,7 +283,14 @@
     wl-clip-persist
     nodejs
     lshw
+    pciutils
 
+    ripgrep
+    gcc
+    cargo
+    btop
+    bat
+    unzip
     # lsp
 
     wayland-scanner
@@ -314,23 +321,16 @@
     telegram-desktop
     trayscale
 
-    lutris
-
     # for qute autofil
     keyutils
 
-    qbittorrent
     gamemode
-
-    (xivlauncher-rb.override { useGameMode = true; })
 
     libimobiledevice
     ifuse
     remmina
     p7zip
     distrobox
-
-    inputs.helium.defaultPackage.${stdenv.hostPlatform.system}
 
     kdiskmark
 
