@@ -177,7 +177,7 @@
       htop = "btop";
       cat = "bat";
       fuck = "f";
-      nix-shell = "nix-shell --command zsh";
+      nix-shell = "nix-shell --command fish";
     };
 
     interactiveShellInit = ''
