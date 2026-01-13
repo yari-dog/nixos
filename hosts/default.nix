@@ -7,6 +7,7 @@
   nixos-hardware,
   yazi,
   nixos-xivlauncher-rb,
+  helium,
   ...
 }:
 
