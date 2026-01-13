@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   home.username = "yari";
@@ -35,22 +40,72 @@
     legcord
     prismlauncher
     ghidra
+    gruvbox-dark-gtk
   ];
 
-  home.pointerCursor = {
-    package = pkgs.simp1e-cursors;
-    name = "Simp1e-Gruvbox-Dark";
-    size = 18;
-    gtk.enable = true;
-    x11.enable = true;
-  };
+  stylix.targets.neovim.enable = false;
+  stylix.targets.starship.enable = false;
+  stylix.targets.gtk.enable = false;
+  # stylix.targets.mako.enable = false;
 
+  # stylix = {
+  #   enable = true;
+  #   autoEnable = false;
+  #   base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+  #   # image = ../../wallpapers/bg.png;
+  #   polarity = "dark";
+  #   cursor = {
+  #     package = pkgs.capitaine-cursors-themed;
+  #     name = "Capitaine Cursors (Gruvbox)";
+  #     size = 32;
+  #   };
+  #   enableReleaseChecks = false;
+  # };
+
+  # home.pointerCursor = {
+  #   package = pkgs.simp1e-cursors;
+  #   name = "Simp1e-Gruvbox-Dark";
+  #   size = 18;
+  #   gtk.enable = true;
+  #   x11.enable = true;
+  # };
+  #
   gtk = {
     enable = true;
-    colorScheme = "dark";
     theme = {
-      name = "gruvbox-dark-gtk";
+      name = "gruvbox-dark";
       package = pkgs.gruvbox-dark-gtk;
+    };
+    gtk3 = {
+      extraConfig = {
+        gtk-application-prefer-dark-theme = true;
+        gtk-font-name = "Sarasa Term J Nerd Font";
+        gtk-cursor-theme-size = 18;
+        gtk-toolbar-style = 3;
+        gtk-toolbar-icon-size = "GTK_ICON_SIZE_SMALL_TOOLBAR";
+        gtk-button-images = 0;
+        gtk-menu-images = 0;
+        gtk-enable-event-sounds = 1;
+        gtk-enable-input-feedback-sounds = 0;
+        gtk-xft-antialias = 1;
+        gtk-xft-hinting = 1;
+        gtk-xft-hintstyle = "hintslight";
+        gtk-xft-rgba = "rgb";
+        gtk-decoration-layout = "icon:minimize,maximize,close";
+        gtk-enable-animations = true;
+        gtk-modules = "colorreload-gtk-module";
+        gtk-primary-button-warps-slider = true;
+        gtk-sound-theme-name = "ocean";
+        gtk-xft-dpi = 98304;
+      };
+    };
+  };
+  #
+  # # gtk 4
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      gtk-theme = "gruvbox-dark";
+      color-scheme = lib.mkIf true "prefer-dark";
     };
   };
 

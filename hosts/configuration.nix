@@ -243,6 +243,34 @@
     enable = true;
   };
 
+  programs.thunar.enable = true;
+
+  # programs.dconf.enable = true;
+  stylix = {
+    enable = true;
+    autoEnable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+    # image = ../../wallpapers/bg.png;
+    polarity = "dark";
+    cursor = {
+      package = pkgs.capitaine-cursors-themed;
+      name = "Capitaine Cursors (Gruvbox)";
+      size = 18;
+    };
+    fonts = {
+      serif.name = "Sarasa Term J Nerd Font";
+      sansSerif.name = "Sarasa Term J Nerd Font";
+      monospace.name = "Sarasa Term J Nerd Font";
+    };
+    icons = {
+      package = pkgs.gruvbox-dark-icons-gtk;
+      dark = "oomox-gruvbox-dark";
+      light = "oomox-gruvbox-dark";
+      enable = true;
+    };
+    enableReleaseChecks = false;
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [

@@ -16,6 +16,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     helium.url = "github:FKouhai/helium2nix/main";
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     inputs@{
@@ -28,6 +32,7 @@
       yazi,
       nixos-xivlauncher-rb,
       helium,
+      stylix,
     }:
     {
       nixosConfigurations = (
@@ -43,6 +48,7 @@
             yazi
             nixos-xivlauncher-rb
             helium
+            stylix
             ;
         }
       );

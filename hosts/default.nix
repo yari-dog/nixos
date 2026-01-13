@@ -8,6 +8,7 @@
   yazi,
   nixos-xivlauncher-rb,
   helium,
+  stylix,
   ...
 }:
 
@@ -36,6 +37,7 @@ in
       nixpkgs-xr.nixosModules.nixpkgs-xr
       home-manager.nixosModules.home-manager
       nixos-xivlauncher-rb.nixosModules.default
+      stylix.nixosModules.stylix
       {
         nixpkgs.overlays = [
           neovim-nightly-overlay.overlays.default
@@ -66,6 +68,7 @@ in
       nixpkgs-xr.nixosModules.nixpkgs-xr
       home-manager.nixosModules.home-manager
       nixos-xivlauncher-rb.nixosModules.default
+      stylix.nixosModules.stylix
       {
         nixpkgs.overlays = [
           neovim-nightly-overlay.overlays.default
@@ -95,6 +98,7 @@ in
       nixos-hardware.nixosModules.lenovo-thinkpad-t420
       nixpkgs-xr.nixosModules.nixpkgs-xr
       home-manager.nixosModules.home-manager
+      stylix.nixosModules.stylix
       {
         nixpkgs.overlays = [
           neovim-nightly-overlay.overlays.default

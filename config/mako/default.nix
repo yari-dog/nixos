@@ -13,10 +13,10 @@
       on-button-left = "dismiss";
       on-button-right = "none";
 
-      background-color = "#504945FF";
-      border-color = "#504945FF";
-      progress-color = "source #d3869b";
-      text-color = "#ebdbb2";
+      # background-color = "#504945FF";
+      # border-color = "#504945FF";
+      # progress-color = "source #d3869b";
+      # text-color = "#ebdbb2";
 
       default-timeout = 5000;
       max-visible = 5;
@@ -27,7 +27,9 @@
 
       markup = 1;
 
-      "mode=do-not-disturb" = { invisible = 1; };
+      "mode=do-not-disturb" = {
+        invisible = 1;
+      };
     };
   };
 }

@@ -31,7 +31,7 @@ layout {
 cursor {
     hide-when-typing
 
-    xcursor-theme "Simp1e-Gruvbox-Dark"
+    xcursor-theme "Capitaine Cursors (Gruvbox)"
     xcursor-size 18
 }
 
