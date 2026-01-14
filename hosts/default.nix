@@ -5,9 +5,7 @@
   home-manager,
   neovim-nightly-overlay,
   nixos-hardware,
-  yazi,
   nixos-xivlauncher-rb,
-  helium,
   stylix,
   ...
 }:
@@ -41,7 +39,6 @@ in
       {
         nixpkgs.overlays = [
           neovim-nightly-overlay.overlays.default
-          yazi.overlays.default
         ];
         home-manager = {
           useGlobalPkgs = true;
@@ -75,7 +72,6 @@ in
       {
         nixpkgs.overlays = [
           neovim-nightly-overlay.overlays.default
-          yazi.overlays.default
         ];
         home-manager = {
           useGlobalPkgs = true;
@@ -105,7 +101,6 @@ in
       {
         nixpkgs.overlays = [
           neovim-nightly-overlay.overlays.default
-          yazi.overlays.default
         ];
         home-manager = {
           useGlobalPkgs = true;

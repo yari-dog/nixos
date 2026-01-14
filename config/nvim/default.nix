@@ -1,6 +1,7 @@
 { inputs, pkgs, ... }:
 
 {
+  imports = [ ./nixvim.nix ];
   home.packages = with pkgs; [
     asm-lsp
     asmfmt
@@ -16,9 +17,9 @@
     prettier
   ];
 
-  home.file.".config/nvim/lua" = {
-    source = ./config/lua;
-    recursive = true;
-  };
-  home.file.".config/nvim/init.lua".source = ./config/init.lua;
+  # home.file.".config/nvim/lua" = {
+  #   source = ./config/lua;
+  #   recursive = true;
+  # };
+  # home.file.".config/nvim/init.lua".source = ./config/init.lua;
 }

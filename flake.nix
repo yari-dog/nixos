@@ -10,7 +10,6 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
-    yazi.url = "github:sxyazi/yazi";
     nixos-xivlauncher-rb = {
       url = "github:The1Penguin/nixos-xivlauncher-rb";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,6 +17,10 @@
     helium.url = "github:FKouhai/helium2nix/main";
     stylix = {
       url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixvim = {
+      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -29,10 +32,10 @@
       home-manager,
       neovim-nightly-overlay,
       nixos-hardware,
-      yazi,
       nixos-xivlauncher-rb,
       helium,
       stylix,
+      nixvim,
     }:
     {
       nixosConfigurations = (
@@ -45,10 +48,10 @@
             home-manager
             nixos-hardware
             neovim-nightly-overlay
-            yazi
             nixos-xivlauncher-rb
             helium
             stylix
+            nixvim
             ;
         }
       );

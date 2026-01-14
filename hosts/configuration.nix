@@ -4,6 +4,7 @@
 
 {
   config,
+  lib,
   pkgs,
   host,
   inputs,
@@ -23,8 +24,11 @@
   console = {
     enable = true;
     earlySetup = true;
+    useXkbConfig = true;
   };
-  services.kmscon.enable = true;
+  # services.kmscon.enable = true;
+  # services.kmscon.extraOptions = "--mode=3440x1440 --gpus=primary";
+  # services.kmscon.extraConfig = "font-name=Sarasa Term J Nerd Font";
 
   networking.hostName = host.hostName; # Define your hostname.
 
@@ -95,10 +99,10 @@
   services.xserver.enable = true;
 
   # # Enable the GNOME Desktop Environment.
-  # services.displayManager.gdm.enable = true;
+  services.displayManager.gdm.enable = true;
   # services.desktopManager.gnome.enable = true;
 
-  services.displayManager.ly.enable = true;
+  # services.displayManager.ly.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -129,6 +133,8 @@
   networking.firewall.checkReversePath = "loose";
 
   services.udisks2.enable = true;
+
+  services.gvfs.enable = true;
 
   security.doas.enable = true;
   security.sudo.enable = false;
@@ -308,8 +314,8 @@
     python3
     # other
     bitwarden-desktop
-    bitwarden-cli
-    bitwarden-menu
+    # bitwarden-cli
+    # bitwarden-menu
 
     vial
     # qmk
@@ -322,12 +328,12 @@
     trayscale
 
     # for qute autofil
-    keyutils
+    # keyutils
 
     gamemode
 
-    libimobiledevice
-    ifuse
+    # libimobiledevice
+    # ifuse
     remmina
     p7zip
     distrobox
@@ -354,7 +360,7 @@
       obs-vkcapture
     ];
   };
-  services.usbmuxd.enable = true;
+  # services.usbmuxd.enable = true;
 
   # hardware.keyboard.qmk.enable = true;
   virtualisation.podman = {

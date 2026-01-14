@@ -28,13 +28,11 @@
   # services.minecraft-server.enable = true;
 
   home.packages = with pkgs; [
-    neovim
     hyfetch
     foot
     lua-language-server
     legcord
     prismlauncher
-    ghidra
     gruvbox-dark-gtk
     qbittorrent
     (xivlauncher-rb.override { useGameMode = true; })
