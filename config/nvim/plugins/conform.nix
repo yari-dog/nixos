@@ -1,17 +1,13 @@
 { pkgs, ... }:
 {
-  # Dependencies
-  #
-  # https://nix-community.github.io/nixvim/NeovimOptions/index.html#extrapackages
   extraPackages = with pkgs; [
-    # Used to format Lua code
-    stylua
   ];
 
   # Autoformat
   # https://nix-community.github.io/nixvim/plugins/conform-nvim.html
   plugins.conform-nvim = {
     enable = true;
+    autoInstall.enable = true;
     settings = {
       notify_on_error = false;
       format_on_save = ''
@@ -31,16 +27,30 @@
         end
       '';
       formatters_by_ft = {
+        c = [ "clang_format" ];
+        cpp = [ "clang_format" ];
+        css = [ "prettier" ];
+        html = [ "prettier" ];
         lua = [ "stylua" ];
+        javascript = [ "prettier" ];
+        json = [ "prettier" ];
+        markdown = [ "prettier" ];
+        nix = [ "nixfmt" ];
+        python = [ "black" ];
+        rust = [ "rustfmt" ];
+
         # Conform can also run multiple formatters sequentially
-        # python = [ "isort "black" ];
-        #
         # You can use 'stop_after_first' to run the first available formatter from this list
-        #javascript = {
+        # javascript = {
         # __unkeyed-1 = "prettierd";
         # __unkeyed-2 = "prettier";
         # stop_after_first = true;
         #};
+      };
+      formatters = {
+        clang_format = {
+          prepend_args = [ "--style=file" ];
+        };
       };
     };
   };

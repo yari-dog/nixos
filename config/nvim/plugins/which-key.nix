@@ -6,8 +6,12 @@
 
     # Document existing key chains
     settings = {
+      win = {
+        border = "shadow";
+      };
       # delay between pressing a key and opening which-key (milliseconds)
       # this setting is independent of vim.opt.timeoutlen
+      preset = "helix";
       delay = 0;
       spec = [
         {

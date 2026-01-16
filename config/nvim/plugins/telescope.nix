@@ -109,6 +109,12 @@
     };
     settings = {
       extensions.__raw = "{ ['ui-select'] = { require('telescope.themes').get_dropdown() } }";
+      defaults.mappings = {
+        n = {
+          "i" = "move_selection_previous";
+          "e" = "move_selection_next";
+        };
+      };
     };
   };
 

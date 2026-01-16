@@ -6,15 +6,10 @@
     asm-lsp
     asmfmt
     ast-grep
-    nixfmt
-    nil
-    black
-    rustfmt
-    rust-analyzer
     basedpyright
-    clang-tools
+    # black
+    # clang-tools
     vim-language-server
-    prettier
   ];
 
   # home.file.".config/nvim/lua" = {

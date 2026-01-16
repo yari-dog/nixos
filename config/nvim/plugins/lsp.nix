@@ -66,36 +66,23 @@
     #  - capabilities: Override fields in capabilities. Can be used to disable certain LSP features.
     #  - settings: Override the default settings passed when initializing the server.
     #        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+    # See `https://nix-community.github.io/nixvim/plugins/lsp` for a list of pre-configured LSPs
     servers = {
-      # clangd = {
-      #   enable = true;
-      # };
-      # gopls = {
-      #   enable = true;
-      # };
-      # pyright = {
-      #   enable = true;
-      # };
-      # rust_analyzer = {
-      #   enable = true;
-      # };
-      # ...etc. See `https://nix-community.github.io/nixvim/plugins/lsp` for a list of pre-configured LSPs
-      #
-      # Some languages (like typscript) have entire language plugins that can be useful:
-      #    `https://nix-community.github.io/nixvim/plugins/typescript-tools/index.html?highlight=typescript-tools#pluginstypescript-toolspackage`
-      #
-      # But for many setups the LSP (`ts_ls`) will work just fine
-      # ts_ls = {
-      #   enable = true;
-      # };
+      basedpyright.enable = true; # python and shit
+      clangd.enable = true; # c and stuff
+      cmake-language-server.enable = true; # makefiles
+      nil_ls.enable = true; # nix
+      ts_ls.enable = true; # typescript
 
-      # Nix lsp
-      nil_ls = {
+      # rust and shit
+      rust_analyzer = {
         enable = true;
+        installCargo = true;
+        installRustc = true;
       };
 
-      # Lua lsp
       lua_ls = {
+        # lua
         enable = true;
 
         # cmd = {
@@ -185,6 +172,14 @@
           action.__raw = "require('telescope.builtin').lsp_type_definitions";
           options = {
             desc = "LSP: [G]oto [T]ype Definition";
+          };
+        }
+        {
+          mode = "n";
+          key = "grh";
+          action.__raw = ''"<cmd>LspClangdSwitchSourceHeader<cr>"'';
+          options = {
+            desc = "LSP: [G]oto [H]eader";
           };
         }
       ];
@@ -289,6 +284,8 @@
           vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
         end, '[T]oggle Inlay [H]ints')
       end
+
+      client.server_capabilities.semanticTokensProvider = nil
     '';
   };
 }

@@ -8,7 +8,11 @@ let
 in
 {
   imports = [ inputs.nixvim.homeModules.nixvim ];
-  stylix.targets.nixvim.enable = false;
+
+  stylix.targets.nixvim = {
+    enable = true;
+  };
+
   programs.nixvim = {
     enable = true;
     imports = [
@@ -16,31 +20,7 @@ in
       ./keybinds.nix
 
       # Plugins
-      ./plugins/gitsigns.nix
-      ./plugins/which-key.nix
-      ./plugins/telescope.nix
-      ./plugins/lsp.nix
-      ./plugins/conform.nix
-      ./plugins/blink-cmp.nix
-      ./plugins/todo-comments.nix
-      ./plugins/mini.nix
-      ./plugins/treesitter.nix
-      ./plugins/bufferline.nix
-      ./plugins/smear-cursor.nix
-
-      # NOTE: Add/Configure additional plugins for Kickstart.nixvim
-      #
-      #  Here are some example plugins that I've included in the Kickstart repository.
-      #  Uncomment any of the lines below to enable them (you will need to restart nvim).
-      #
-      # ./config/plugins/kickstart/debug.nix
-      # ./config/plugins/kickstart/indent-blankline.nix
-      # ./config/plugins/kickstart/lint.nix
-      # ./config/plugins/kickstart/autopairs.nix
-      # ./config/plugins/kickstart/neo-tree.nix
-      #
-      # NOTE: Configure your own plugins `see https://nix-community.github.io/nixvim/`
-      # Add your plugins to ./config/plugins/custom and import them below
+      ./plugins
     ];
 
     colorschemes = {
@@ -48,9 +28,9 @@ in
         enable = true;
         settings = {
           overrides = {
-            "@lsp.type.variable" = {
-              bold = true;
-            };
+            # "@lsp.type.variable" = {
+            #   bold = true;
+            # };
             "@property" = {
               fg = "#ebdbb2";
               italic = true;
@@ -59,9 +39,12 @@ in
               fg = "#ebdbb2";
               italic = true;
             };
-            "@lsp.type.const" = {
-              bold = true;
-            };
+            # "@lsp.type.const" = {
+            #   bold = true;
+            # };
+            # "@lsp.type.type" = {
+            #   bold = false;
+            # };
             "@string" = {
               fg = "#8ec07c";
               italic = true;
@@ -180,7 +163,7 @@ in
           source = "if_many";
         };
         underline = {
-          severity.__raw = ''vim.diagnostic.severity.ERROR'';
+          severity.__raw = "vim.diagnostic.severity.ERROR";
         };
         signs.__raw = ''
           vim.g.have_nerd_font and {
@@ -228,6 +211,7 @@ in
     extraConfigLuaPost = ''
       -- The line beneath this is called `modeline`. See `:help modeline`
       -- vim: ts=2 sts=2 sw=2 et
+      vim.g.loaded_netrwPlugin = 1
     '';
   };
 }
