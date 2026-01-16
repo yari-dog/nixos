@@ -205,6 +205,7 @@
       SDL2
       gtk3
       mono
+      gperftools
     ];
   };
 
@@ -251,7 +252,7 @@
 
   programs.thunar.enable = true;
 
-  # programs.dconf.enable = true;
+  programs.dconf.enable = true;
   stylix = {
     enable = true;
     autoEnable = true;
@@ -340,6 +341,8 @@
 
     kdiskmark
 
+    freerdp
+
     fishPlugins.done
     fishPlugins.fzf-fish
     fishPlugins.forgit
@@ -362,6 +365,7 @@
   };
   # services.usbmuxd.enable = true;
 
+  virtualisation.spiceUSBRedirection.enable = true;
   # hardware.keyboard.qmk.enable = true;
   virtualisation.podman = {
     enable = true;

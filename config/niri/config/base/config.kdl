@@ -47,15 +47,15 @@ animations {
 environment {
   PROTON_USE_WAYLAND "1"
   CLUTTER_BACKEND "wayland"
-  GDK_BACKEND "wayland,x11,*"
+  // GDK_BACKEND "wayland,x11,*"
   GDK_DPI_SCALE "1"
   GDK_SCALE "1"
   QT_AUTO_SCREEN_SCALE_FACTOR "1"
-  QT_QPA_PLATFORM "wayland;xcb"
+  // QT_QPA_PLATFORM "wayland;xcb"
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
   SDL_VIDEODRIVER "wayland"
-  GSK_RENDERER "ngl"
+  // GSK_RENDERER "ngl"
   ELECTRON_OZONE_PLATFORM_HINT "auto"
   WLR_NO_HARDWARE_CURSORS "1"
   DMS_DISABLE_MATUGEN "1"
@@ -91,6 +91,15 @@ window-rule {
 
     // Use this instead if you want them visible on third-party screenshot tools.
     // block-out-from "screencast"
+}
+// Indicate screencasted windows with red colors.
+window-rule {
+    match is-window-cast-target=true
+
+    focus-ring {
+        active-color "#fb4934"
+        inactive-color "#fe8019"
+    }
 }
 
 // Dialogs window rule
