@@ -24,6 +24,9 @@
 
   services.trayscale.enable = true;
   services.gnome-keyring.enable = true;
+  # services.flatpak.packages = [
+  #   "com.valvesoftware.Steam"
+  # ];
 
   # services.minecraft-server.enable = true;
 

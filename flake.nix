@@ -23,6 +23,7 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
   outputs =
     inputs@{
@@ -36,6 +37,7 @@
       helium,
       stylix,
       nixvim,
+      nix-flatpak,
     }:
     {
       nixosConfigurations = (
@@ -52,6 +54,7 @@
             helium
             stylix
             nixvim
+            nix-flatpak
             ;
         }
       );

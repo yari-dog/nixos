@@ -136,6 +136,21 @@
 
   services.gvfs.enable = true;
 
+  services.flatpak = {
+    enable = true;
+    packages = [
+      "com.valvesoftware.Steam"
+    ];
+  };
+
+  # systemd.services.flatpak-repo = {
+  #   wantedBy = [ "multi-user.target" ];
+  #   path = [ pkgs.flatpak ];
+  #   script = ''
+  #     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  #   '';
+  # };
+
   security.doas.enable = true;
   security.sudo.enable = false;
 
@@ -195,19 +210,19 @@
     '';
   };
 
-  programs.steam = {
-    enable = true;
-    protontricks.enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-    extraCompatPackages = with pkgs; [ proton-ge-rtsp-bin ];
-    extraPackages = with pkgs; [
-      SDL2
-      gtk3
-      mono
-      gperftools
-    ];
-  };
+  # programs.steam = {
+  #   enable = true;
+  #   protontricks.enable = true;
+  #   remotePlay.openFirewall = true;
+  #   dedicatedServer.openFirewall = true;
+  #   extraCompatPackages = with pkgs; [ proton-ge-rtsp-bin ];
+  #   extraPackages = with pkgs; [
+  #     SDL2
+  #     gtk3
+  #     mono
+  #     gperftools
+  #   ];
+  # };
 
   systemd.services.nixos-upgrade.path = [ pkgs.git ];
 
@@ -349,6 +364,10 @@
     fzf
     fishPlugins.grc
     grc
+
+    gnome-software
+
+    piper
   ];
 
   services.mpd.enable = true;
@@ -371,6 +390,10 @@
     enable = true;
     dockerCompat = true;
   };
+
+  services.ratbagd.enable = true;
+
+  services.irqbalance.enable = true;
 
   services.udev = {
     packages = with pkgs; [
