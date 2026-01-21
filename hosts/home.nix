@@ -21,6 +21,7 @@
     };
   };
   programs.mpv.enable = true;
+  programs.discord.enable = true;
 
   services.trayscale.enable = true;
   services.gnome-keyring.enable = true;
@@ -41,6 +42,7 @@
     (xivlauncher-rb.override { useGameMode = true; })
     inputs.helium.defaultPackage.${stdenv.hostPlatform.system}
     lutris
+    qpwgraph
   ];
 
   programs.anki = {
