@@ -74,7 +74,10 @@ in
           useUserPackages = true;
           users.yari = import ./home.nix;
           backupFileExtension = "backup";
-          extraSpecialArgs.host = "yifftop";
+          extraSpecialArgs = {
+            inherit inputs;
+            host = "yifftop";
+          };
         };
       }
     ];
@@ -101,7 +104,10 @@ in
           useUserPackages = true;
           users.yari = import ./home.nix;
           backupFileExtension = "backup";
-          extraSpecialArgs.host = "yiffpad";
+          extraSpecialArgs = {
+            inherit inputs;
+            host = "yiffpad";
+          };
         };
       }
     ];
