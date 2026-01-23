@@ -3,7 +3,6 @@
   nixpkgs,
   nixpkgs-xr,
   home-manager,
-  neovim-nightly-overlay,
   nixos-hardware,
   nixos-xivlauncher-rb,
   stylix,
@@ -39,9 +38,6 @@ in
       stylix.nixosModules.stylix
       nix-flatpak.nixosModules.nix-flatpak
       {
-        nixpkgs.overlays = [
-          neovim-nightly-overlay.overlays.default
-        ];
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
@@ -73,9 +69,6 @@ in
       stylix.nixosModules.stylix
       nix-flatpak.nixosModules.nix-flatpak
       {
-        nixpkgs.overlays = [
-          neovim-nightly-overlay.overlays.default
-        ];
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
@@ -103,9 +96,6 @@ in
       stylix.nixosModules.stylix
       nix-flatpak.nixosModules.nix-flatpak
       {
-        nixpkgs.overlays = [
-          neovim-nightly-overlay.overlays.default
-        ];
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;

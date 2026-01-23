@@ -8,7 +8,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
     nixos-xivlauncher-rb = {
       url = "github:The1Penguin/nixos-xivlauncher-rb";
@@ -31,7 +30,6 @@
       nixpkgs,
       nixpkgs-xr,
       home-manager,
-      neovim-nightly-overlay,
       nixos-hardware,
       nixos-xivlauncher-rb,
       helium,
@@ -49,7 +47,6 @@
             nixpkgs-xr
             home-manager
             nixos-hardware
-            neovim-nightly-overlay
             nixos-xivlauncher-rb
             helium
             stylix
