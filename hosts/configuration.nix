@@ -47,7 +47,7 @@
   boot.loader.timeout = 0;
   # Use latest kernel.
   # boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgs.linuxPackages_lqx;
 
   boot.plymouth.enable = true;
 
@@ -64,6 +64,8 @@
       substituters = [
         "https://nix-community.cachix.org"
         "https://cache.nixos.org/"
+        "https://nyx.chaotic.cx"
+        "https://nix-community.cachix.org"
       ];
     };
   };
