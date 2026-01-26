@@ -9,7 +9,7 @@
 {
   home.username = "yari";
   home.homeDirectory = "/home/yari";
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
   programs.git = {
     enable = true;
     settings = {
