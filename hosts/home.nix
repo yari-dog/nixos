@@ -35,7 +35,6 @@
     hyfetch
     foot
     lua-language-server
-    legcord
     prismlauncher
     gruvbox-dark-gtk
     qbittorrent
