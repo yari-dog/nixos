@@ -6,14 +6,15 @@
     extraPortals = with pkgs; [
       xdg-desktop-portal-gnome
       xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr
       # xdg-desktop-portal-termfilechooser
     ];
     xdgOpenUsePortal = true;
 
-    config.common = {
-      "default" = "gtk";
-      "org.freedesktop.impl.portal.ScreenCast" = "gnome";
-    };
+    config.common.default = "*";
+    #   "default" = "gtk";
+    #   "org.freedesktop.impl.portal.ScreenCast" = "gnome";
+    # };
   };
   xdg.terminal-exec = {
     enable = true;
@@ -24,6 +25,7 @@
     };
   };
   #
+  home.sessionVariables.TERM = "foot";
   home.sessionVariables.TERMCMD = "foot";
   home.sessionVariables.TERMINAL = "foot";
   home.sessionVariables.EDITOR = "nvim";

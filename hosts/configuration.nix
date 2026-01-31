@@ -151,6 +151,7 @@
     packages = [
       "com.valvesoftware.Steam"
     ];
+    uninstallUnmanaged = true;
   };
 
   # systemd.services.flatpak-repo = {
