@@ -46,5 +46,6 @@
     # wayvr-dashboard
     xivlauncher-rb
     clinfo
+    vtfedit
   ];
 }
