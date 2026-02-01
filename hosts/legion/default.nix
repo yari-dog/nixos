@@ -1,7 +1,15 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  imports = [ ./hardware-configuration.nix ../kanata.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    ../modules/kanata.nix
+  ];
 
   services.xserver.xkb = {
     layout = "us";
