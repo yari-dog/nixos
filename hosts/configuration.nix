@@ -154,6 +154,9 @@
       "com.valvesoftware.Steam"
     ];
     uninstallUnmanaged = true;
+    overrides = {
+      "com.valvesoftware.Steam".Context.filesystems = lib.mkDefault [ "~/steam-data" ];
+    };
   };
 
   # systemd.services.flatpak-repo = {
