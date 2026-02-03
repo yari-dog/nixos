@@ -7,6 +7,10 @@
 }:
 
 {
+  imports = [
+    ../config
+  ];
+
   home.username = "yari";
   home.homeDirectory = "/home/yari";
   home.stateVersion = "26.05";
@@ -95,7 +99,7 @@
     enable = true;
   };
 
-  imports = [ ../config ];
+  # imports = [ ../config ];
   # For Monado:
   # xdg.configFile."openxr/1/active_runtime.json".source =
   #   "${pkgs.monado}/share/openxr/1/openxr_monado.json";

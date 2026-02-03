@@ -152,11 +152,21 @@
     enable = true;
     packages = [
       "com.valvesoftware.Steam"
+      "com.github.tchx84.Flatseal"
     ];
     uninstallUnmanaged = true;
     overrides = {
-      "com.valvesoftware.Steam".Context.filesystems = lib.mkDefault [ "~/steam-data" ];
+      "com.valvesoftware.Steam".Context.filesystems = lib.mkDefault [
+        "xdg-pictures:rw"
+        "xdg-videos:rw"
+        "~/steam-data"
+      ];
+      "com.valvesoftware.Steam".Context.nofilesystems = lib.mkDefault [ "home" ];
+      "global".Context.filesystems = lib.mkDefault [
+        "home"
+      ];
     };
+    update.onActivation = true;
   };
 
   # systemd.services.flatpak-repo = {
