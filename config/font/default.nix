@@ -1,11 +1,8 @@
-{ inputs, pkgs, ... }:
+{ config, ... }:
 
 {
-
-  home.packages = with pkgs; [ sarasa-gothic ];
-
-  home.file.".local/share/fonts" = {
-    source = ./fonts;
+  home.file.".local/share/fonts/" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix/config/font/fonts";
     recursive = true;
   };
 }
