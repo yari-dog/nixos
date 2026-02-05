@@ -410,9 +410,6 @@
     ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
   programs.nh = {
     enable = true;
   };
@@ -536,8 +533,6 @@
     fzf
     fishPlugins.grc
     grc
-
-    gnome-software
 
     piper
   ];
