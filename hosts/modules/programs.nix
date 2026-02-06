@@ -160,5 +160,7 @@
     grc
 
     piper
+
+    widevine-cdm
   ];
 }
