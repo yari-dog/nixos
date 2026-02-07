@@ -23,6 +23,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    tidaLuna.url = "github:Inrixia/TidaLuna";
   };
   outputs =
     inputs@{
@@ -36,6 +37,7 @@
       stylix,
       nixvim,
       nix-flatpak,
+      tidaLuna,
     }:
     {
       nixosConfigurations = (
@@ -52,6 +54,7 @@
             stylix
             nixvim
             nix-flatpak
+            tidaLuna
             ;
         }
       );
