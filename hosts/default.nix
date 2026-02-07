@@ -54,7 +54,7 @@ in
     ];
   };
   yifftop = lib.nixosSystem {
-    inherit system;
+    inherit system pkgs;
     specialArgs = {
       inherit inputs system;
       host = {
@@ -85,7 +85,7 @@ in
     ];
   };
   yiffpad = lib.nixosSystem {
-    inherit system;
+    inherit system pkgs;
     specialArgs = {
       inherit inputs system;
       host = {
