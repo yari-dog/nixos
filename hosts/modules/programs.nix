@@ -162,5 +162,6 @@
     piper
 
     widevine-cdm
+    ffmpeg
   ];
 }

@@ -44,7 +44,7 @@
     # libsurvive
     # basalt-monado
     # wayvr-dashboard
-    xivlauncher-rb
+    (xivlauncher-rb.override { useGameMode = true; })
     clinfo
     vtfedit
   ];

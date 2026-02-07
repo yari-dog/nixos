@@ -7,6 +7,7 @@
   nixos-xivlauncher-rb,
   stylix,
   nix-flatpak,
+  tidaLuna,
   ...
 }:
 
@@ -16,13 +17,14 @@ let
   pkgs = import nixpkgs {
     inherit system;
     config.allowUnfree = true;
+    config.chromium.enableWideVine = true;
   };
 
   lib = nixpkgs.lib;
 in
 {
   yiff = lib.nixosSystem {
-    inherit system;
+    inherit system pkgs;
     specialArgs = {
       inherit inputs system;
       host = {

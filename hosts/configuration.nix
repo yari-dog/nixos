@@ -19,8 +19,6 @@
     enable32Bit = true;
   };
   hardware.steam-hardware.enable = true;
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.chromium.enableWideVine = true;
   hardware.firmware = [ pkgs.linux-firmware ];
 
   console = {

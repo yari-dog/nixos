@@ -11,6 +11,7 @@
     ../config
   ];
 
+  # pkgs.config.chromium.enableWideVine = true;
   home.username = "yari";
   home.homeDirectory = "/home/yari";
   home.stateVersion = "26.05";
@@ -29,7 +30,6 @@
 
   services.trayscale.enable = true;
   services.gnome-keyring.enable = true;
-
   home.packages = with pkgs; [
     hyfetch
     foot
@@ -37,10 +37,10 @@
     prismlauncher
     gruvbox-dark-gtk
     qbittorrent
-    (xivlauncher-rb.override { useGameMode = true; })
     inputs.helium.defaultPackage.${stdenv.hostPlatform.system}
     lutris
     qpwgraph
+    inputs.tidaLuna.packages.${stdenv.hostPlatform.system}.default
   ];
 
   programs.anki = {
