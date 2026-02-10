@@ -33,7 +33,7 @@ in
     };
     modules = [
       ./yiff
-      ./configuration.nix
+      ../configuration.nix
       nixpkgs-xr.nixosModules.nixpkgs-xr
       home-manager.nixosModules.home-manager
       nixos-xivlauncher-rb.nixosModules.default
@@ -43,7 +43,7 @@ in
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          users.yari = import ./home.nix;
+          users.yari = import ../home;
           backupFileExtension = "backup";
           extraSpecialArgs = {
             inherit inputs;
@@ -94,7 +94,7 @@ in
     };
     modules = [
       ./t420s
-      ./configuration.nix
+      ../configuration.nix
       nixos-hardware.nixosModules.lenovo-thinkpad-t420
       nixpkgs-xr.nixosModules.nixpkgs-xr
       home-manager.nixosModules.home-manager
@@ -104,7 +104,7 @@ in
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          users.yari = import ./home.nix;
+          users.yari = import ../home;
           backupFileExtension = "backup";
           extraSpecialArgs = {
             inherit inputs;
