@@ -57,6 +57,8 @@
     sync.keyFile = config.lib.file.mkOutOfStoreSymlink "/home/yari/.ankisecret";
   };
 
+  programs.irssi.enable = true;
+
   stylix.targets.starship.enable = false;
   stylix.targets.gtk.enable = false;
   gtk = {
