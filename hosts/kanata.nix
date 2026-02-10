@@ -39,30 +39,30 @@
           )
           (deflayer default
           _ _ _ _
-          @ctl1 _ @alt1 @fn1 @met1 @met2 @fn2 @alt2 @ctl2 @sft2
+          @ctl1 @alt1 _ @fn1 @met1 @met2 @fn2 _ @alt2 @ctl2
 
           )
           (deflayer fn-layer
-            left down up right _
-            _ _ _ _ _ _ _ _ _
+            left down up right
+            _ _ _ _ _ _ _ _ _ _
           )
           (defalias
            fn1 (tap-hold $tap-time $hold-time c (layer-toggle fn-layer))
            fn2 (tap-hold $tap-time $hold-time m (layer-toggle fn-layer))
            met1 (tap-hold $tap-time $hold-time v lmet)
            met2 (tap-hold $tap-time $hold-time n rmet)
-           alt1 (tap-hold $tap-time $hold-time x lalt)
-           alt2 (tap-hold $tap-time $hold-time Comma lalt)
+           alt1 (tap-hold $tap-time $hold-time z lalt)
+           alt2 (tap-hold $tap-time $hold-time Period lalt)
            ctl1 (tap-hold $tap-time $hold-time IntlBackslash lctl)
-           ctl2 (tap-hold $tap-time $hold-time Period rctl)
-           sft2 (tap-hold $tap-time $hold-time Slash rsft)
+           ctl2 (tap-hold $tap-time $hold-time Slash rctl)
           )
           (defvar
-          tap-time 160
-          hold-time 160
+          tap-time 180
+          hold-time 180
+          chord-time 60
           )
           (defchordsv2
-            (q w) esc $tap-time all-released ()
+            (q w) esc $chord-time all-released ()
           )
         '';
       };

@@ -3,7 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../modules/kanata.nix
+    ../kanata.nix
   ];
 
   services.xserver.xkb = {
