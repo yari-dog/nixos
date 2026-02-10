@@ -63,7 +63,7 @@ in
     };
     modules = [
       ./legion
-      ./configuration.nix
+      ../configuration.nix
       nixos-hardware.nixosModules.lenovo-legion-15ach6h-hybrid
       nixpkgs-xr.nixosModules.nixpkgs-xr
       home-manager.nixosModules.home-manager
@@ -74,7 +74,7 @@ in
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          users.yari = import ./home.nix;
+          users.yari = import ../home;
           backupFileExtension = "backup";
           extraSpecialArgs = {
             inherit inputs;

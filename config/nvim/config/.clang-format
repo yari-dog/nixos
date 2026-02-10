@@ -1,9 +1,0 @@
-BasedOnStyle: GNU 
-AlignConsecutiveAssignments:
-  Enabled: true
-  AcrossEmptyLines: false
-  AcrossComments: false
-  AlignCompound: true
-AlignConsecutiveMacros: true
-IndentWidth: 4
-ColumnLimit: 120

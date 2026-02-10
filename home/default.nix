@@ -1,14 +1,22 @@
 {
   config,
   pkgs,
-  lib,
   inputs,
   ...
 }:
 
 {
   imports = [
-    ../config
+    ./waybar
+    ./qutebrowser
+    ./rofi
+    ./shell
+    ./mako
+    ./font
+    ./niri
+    ./nvim
+    ./yazi
+    ./environment
   ];
 
   # pkgs.config.chromium.enableWideVine = true;
