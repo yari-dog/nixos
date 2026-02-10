@@ -14,7 +14,10 @@
 
   # Add the Kanata service user to necessary groups
   systemd.services.kanata-internalKeyboard.serviceConfig = {
-    SupplementaryGroups = [ "input" "uinput" ];
+    SupplementaryGroups = [
+      "input"
+      "uinput"
+    ];
   };
 
   services.kanata = {
@@ -36,7 +39,7 @@
           )
           (deflayer default
           _ _ _ _
-          @sft1 @ctl1 @alt1 @fn1 @met1 @met2 @fn2 @alt2 @ctl2 @sft2
+          @ctl1 _ @alt1 @fn1 @met1 @met2 @fn2 @alt2 @ctl2 @sft2
 
           )
           (deflayer fn-layer
@@ -50,14 +53,13 @@
            met2 (tap-hold $tap-time $hold-time n rmet)
            alt1 (tap-hold $tap-time $hold-time x lalt)
            alt2 (tap-hold $tap-time $hold-time Comma lalt)
-           ctl1 (tap-hold $tap-time $hold-time z lctl)
+           ctl1 (tap-hold $tap-time $hold-time IntlBackslash lctl)
            ctl2 (tap-hold $tap-time $hold-time Period rctl)
-           sft1 (tap-hold $tap-time $hold-time IntlBackslash lsft)
            sft2 (tap-hold $tap-time $hold-time Slash rsft)
           )
           (defvar
-          tap-time 170
-          hold-time 170
+          tap-time 160
+          hold-time 160
           )
           (defchordsv2
             (q w) esc $tap-time all-released ()
