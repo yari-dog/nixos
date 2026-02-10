@@ -21,6 +21,20 @@
   hardware.steam-hardware.enable = true;
   hardware.firmware = [ pkgs.linux-firmware ];
 
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        Experimental = true;
+        FastConnectable = true;
+      };
+      Police = {
+        AutoEnable = true;
+      };
+    };
+  };
+
   console = {
     enable = true;
     earlySetup = true;
