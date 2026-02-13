@@ -28,7 +28,7 @@
     settings = {
       user = {
         name = "yari :3";
-        email = "yari_dog@protonmail.com";
+        email = "yari@woofwoofwoof.net";
       };
       init.defaultBranch = "main";
     };
