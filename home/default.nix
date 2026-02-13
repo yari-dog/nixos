@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   inputs,
   ...
 }:
@@ -16,6 +17,7 @@
     ./niri
     ./nvim
     ./yazi
+    ./xdg
     ./environment
   ];
 
@@ -95,4 +97,5 @@
   services.udiskie = {
     enable = true;
   };
+
 }
