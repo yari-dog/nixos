@@ -167,5 +167,6 @@
 
     widevine-cdm
     ffmpeg
+    feh
   ];
 }
