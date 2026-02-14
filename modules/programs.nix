@@ -4,6 +4,10 @@
     enable = true;
   };
 
+  programs.steam = {
+    enable = true;
+  };
+
   programs.thunar.enable = true;
 
   programs.dconf.enable = true;
