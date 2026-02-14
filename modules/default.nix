@@ -7,5 +7,6 @@
     ./nix-ld.nix
     ./programs.nix
     ./services.nix
+    ./fonts.nix
   ];
 }
