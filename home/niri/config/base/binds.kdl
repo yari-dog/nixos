@@ -32,11 +32,6 @@ binds {
     Mod+I     { spawn-sh "~/.config/niri/vim-niri-nav up m"; }
     Mod+O     { spawn-sh "~/.config/niri/vim-niri-nav right"; }
 
-    // Mod+N     { focus-column-left; }
-    // Mod+E     { focus-window-or-monitor-down; }
-    // Mod+I     { focus-window-or-monitor-up; }
-    // Mod+O     { focus-column-right; }
-
     Mod+Shift+N     { move-column-left; }
     Mod+Shift+E     { move-window-down; }
     Mod+Shift+I     { move-window-up; }
