@@ -4,6 +4,8 @@
   imports = [ ./hardware-configuration.nix ];
 
   hardware.amdgpu.initrd.enable = true;
+  hardware.enableRedistributableFirmware = true;
+  hardware.graphics.extraPackages32 = with pkgs.pkgsi686Linux; [ intel-media-driver ];
 
   boot.kernelParams = [
     "video=DP-1:3440x1440@75.050"
@@ -13,6 +15,7 @@
   hardware.graphics.extraPackages = with pkgs; [
     rocmPackages.clr
     mesa.opencl
+    intel-media-driver
   ];
   #
   hardware.amdgpu.opencl.enable = true;

@@ -6,6 +6,7 @@
 
   programs.steam = {
     enable = true;
+    protontricks.enable = true;
   };
 
   programs.thunar.enable = true;
@@ -168,5 +169,7 @@
     widevine-cdm
     ffmpeg
     feh
+    nvtopPackages.full
+    libva-utils
   ];
 }

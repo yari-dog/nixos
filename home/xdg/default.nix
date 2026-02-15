@@ -9,5 +9,6 @@
         "video/mp4" = [ "mpv.desktop" ];
       };
     };
+    terminal-exec.settings.default = [ "foot.desktop" ];
   };
 }

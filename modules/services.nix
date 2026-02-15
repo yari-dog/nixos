@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+  services.lact.enable = true;
+
   services.ratbagd.enable = true;
 
   services.irqbalance.enable = true;
