@@ -145,9 +145,9 @@
     # bitwarden-menu
 
     vial
-    # qmk
-    # dos2unix
-    # pkgsCross.avr.buildPackages.gcc
+    qmk
+    dos2unix
+    pkgsCross.avr.buildPackages.gcc
 
     wine
     pwvucontrol
@@ -181,5 +181,6 @@
     feh
     nvtopPackages.full
     libva-utils
+    kdePackages.kdenlive
   ];
 }

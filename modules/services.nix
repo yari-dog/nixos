@@ -9,8 +9,8 @@
   services.udev = {
     packages = with pkgs; [
 
-      # qmk
-      # qmk-udev-rules
+      qmk
+      qmk-udev-rules
       via
       vial
     ];
