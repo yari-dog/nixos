@@ -599,11 +599,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1771024355,
-        "narHash": "sha256-yGKWWql6FZp/IvMgdQGOlze27FLpELDuYFR8Wn+DOnM=",
+        "lastModified": 1771360778,
+        "narHash": "sha256-i0UtMQ2XHVArnZqYzaD80cvLkj1yW8xoIB879Or2o0Q=",
         "owner": "Inrixia",
         "repo": "TidaLuna",
-        "rev": "ffce6283e54a7b7bcf9bd12112956a84d5e34834",
+        "rev": "2ea044aa750b014fbad91d895e55dcd06a102b5b",
         "type": "github"
       },
       "original": {
