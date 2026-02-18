@@ -11,8 +11,8 @@ prepend_keymap = [
   { on = ["O"], run = "forward" },  # Go forward to the next directory.
   { on = ["<C-u>"], run = "seek -5" },
   { on = ["<C-e>"], run = "seek 5" },
-  { on = ["-"], run = "find_arrow" },
-  { on = ["="], run = "find_arrow --previous" },
+  { on = ["h"], run = "find_arrow" },
+  { on = ["H"], run = "find_arrow --previous" },
   { on = ["b", "k"], run = "close" },
 
 ]
@@ -34,6 +34,8 @@ prepend_keymap = [
 
 [input]
 prepend_keymap = [
+  { on = ["n"], run = "move -1" },  # go back
+  { on = ["o"], run = "move 1" }, # regular enter incase a differentiation is needed
   { on = ["t"], run = "insert" },
   { on = ["<C-n>"], run = "move -999" },
   { on = ["<C-o>"], run = "move 999" },
