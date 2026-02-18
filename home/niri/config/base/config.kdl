@@ -70,6 +70,7 @@ environment {
     _JAVA_AWT_WM_NONREPARENTING "1"
   TERM "foot"
   TERMINAL "foot"
+  EDITOR "nvim"
 }
 
 hotkey-overlay {

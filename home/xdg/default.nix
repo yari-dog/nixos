@@ -2,6 +2,9 @@
 {
   xdg = {
     enable = true;
-    terminal-exec.settings.default = [ "foot.desktop" ];
+    terminal-exec = {
+      enable = true;
+      settings.default = [ "foot.desktop" ];
+    };
   };
 }
