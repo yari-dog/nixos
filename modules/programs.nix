@@ -182,5 +182,6 @@
     nvtopPackages.full
     libva-utils
     kdePackages.kdenlive
+    libnotify
   ];
 }
