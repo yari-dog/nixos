@@ -183,5 +183,6 @@
     libva-utils
     kdePackages.kdenlive
     libnotify
+    gnome-software
   ];
 }

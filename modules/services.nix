@@ -6,6 +6,8 @@
 
   services.irqbalance.enable = true;
 
+  services.flatpak.enable = true;
+
   services.udev = {
     packages = with pkgs; [
 
