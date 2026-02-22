@@ -145,3 +145,4 @@ spawn-at-startup "systemctl" "--user" "import-environment" "DISPLAY" "WAYLAND_DI
 spawn-at-startup "hash dbus-update-activation-environment" "2>/dev/null"
 spawn-at-startup "waybar"
 spawn-at-startup "bitwarden"
+spawn-at-startup "easyeffects --service-mode -w"
