@@ -56,7 +56,7 @@
   ];
 
   programs.anki = {
-    enable = true;
+    # enable = true;
     sync.username = "yari_dog@protonmail.com";
     sync.keyFile = config.lib.file.mkOutOfStoreSymlink "/home/yari/.ankisecret";
   };
