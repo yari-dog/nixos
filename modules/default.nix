@@ -2,10 +2,11 @@
 
 {
   imports = [
-    ./xdg.nix
+    ./fonts.nix
     ./nix-ld.nix
     ./programs.nix
+    ./resolve.nix
     ./services.nix
-    ./fonts.nix
+    ./xdg.nix
   ];
 }
