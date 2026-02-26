@@ -68,6 +68,7 @@ environment {
   // QT_FFMPEG_ENCODING_HW_DEVICE_TYPES "vaapi"
   // // fix java
     _JAVA_AWT_WM_NONREPARENTING "1"
+  RUSTICL_ENABLE "amdgpu"
   TERM "foot"
   TERMINAL "foot"
   EDITOR "nvim"
