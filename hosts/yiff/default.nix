@@ -5,19 +5,20 @@
 
   hardware.amdgpu.initrd.enable = true;
   hardware.enableRedistributableFirmware = true;
-  hardware.graphics.extraPackages32 = with pkgs.pkgsi686Linux; [ intel-media-driver ];
 
   boot.kernelParams = [
     "video=DP-1:3440x1440@75.050"
     "video=HDMI-A-1:2560x1080@60,rotate=180"
   ];
-
-  hardware.graphics.extraPackages = with pkgs; [
-    rocmPackages.clr
-    mesa.opencl
-    intel-media-driver
-  ];
-  #
+  environment.variables = {
+    RUSTICL_ENABLE = "radeonsi";
+  };
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      mesa.opencl # Enables Rusticl (OpenCL) support
+    ];
+  };
   hardware.amdgpu.opencl.enable = true;
 
   # Configure keymap in X11
