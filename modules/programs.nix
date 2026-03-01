@@ -185,5 +185,7 @@
     kdePackages.kdenlive
     libnotify
     gnome-software
+    fastfetch
+    macchina
   ];
 }
