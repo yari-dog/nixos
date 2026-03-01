@@ -149,7 +149,8 @@
     dos2unix
     pkgsCross.avr.buildPackages.gcc
 
-    wine
+    wineWow64Packages.stable
+    winetricks
     pwvucontrol
     telegram-desktop
     trayscale
