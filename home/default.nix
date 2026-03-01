@@ -56,9 +56,11 @@
   ];
 
   programs.anki = {
-    # enable = true;
-    sync.username = "yari_dog@protonmail.com";
-    sync.keyFile = config.lib.file.mkOutOfStoreSymlink "/home/yari/.ankisecret";
+    enable = true;
+    profiles."User 1" = {
+      sync.username = "yari_dog@protonmail.com";
+      sync.keyFile = config.lib.file.mkOutOfStoreSymlink "/home/yari/.ankisecret";
+    };
   };
 
   programs.irssi.enable = true;
