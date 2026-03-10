@@ -129,6 +129,7 @@
     description = "yari";
     extraGroups = [
       "networkmanager"
+      "seat"
       "wheel"
       "video"
       "audio"
