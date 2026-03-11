@@ -1,16 +1,12 @@
 { pkgs, ... }:
 {
   services.lact.enable = true;
-
   services.ratbagd.enable = true;
-
   services.irqbalance.enable = true;
-
   services.flatpak.enable = true;
 
   services.udev = {
     packages = with pkgs; [
-
       qmk
       qmk-udev-rules
       via
@@ -24,6 +20,7 @@
   };
   services.mpd.enable = true;
   # services.usbmuxd.enable = true;
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -68,4 +65,6 @@
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
+
+  services.gnome.gnome-keyring.enable = true;
 }
