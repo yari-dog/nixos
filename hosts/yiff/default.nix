@@ -1,7 +1,10 @@
 { lib, pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    ./resolve.nix
+  ];
 
   hardware.amdgpu.initrd.enable = true;
   hardware.enableRedistributableFirmware = true;
