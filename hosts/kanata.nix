@@ -34,16 +34,19 @@
         # have to use pre-xkb maps (qwerty)
         config = ''
           (defsrc
-            j k l Semicolon
+            q w e r t 
+            a s d f g j k l Semicolon
             IntlBackslash z x c v n m Comma Period Slash
           )
           (deflayer default
-          _ _ _ _
+          _ _ _ _ _
+          _ _ _ _ _ _ _ _ _
           @ctl1 @alt1 _ @fn1 @met1 @met2 @fn2 _ @alt2 @ctl2
 
           )
           (deflayer fn-layer
-            left down up right
+            1 2 3 4 5
+            6 7 8 9 0 left down up right
             _ _ _ _ _ _ _ _ _ _
           )
           (defalias
