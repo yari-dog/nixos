@@ -1,0 +1,33 @@
+unmap h
+unmap j
+unmap k
+unmap l
+unmap H
+unmap J
+unmap K
+unmap L
+map n scrollLeft
+map gn goBack
+map e scrollDown
+map ge previousTab
+map i scrollUp
+map gi nextTab
+map o scrollRight
+map go goForward
+map t enterInsertMode
+
+unmap n
+unmap N
+unmap m
+unmap k
+unmap u
+unmap d
+map h performFind
+map H performBackwardsFind
+map m scrollPageUp
+map k scrollPageDown
+
+map s Vomnibar.activate
+map S Vomnibar.activateInNewTab
+
+mapkey d x
