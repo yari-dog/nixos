@@ -124,10 +124,6 @@ window-rule{
     default-window-height { proportion 0.75; }
 }
 
-window-rule {
-    match app-id="tf_linux64"
-    open-fullscreen true
-}
 
 window-rule {
     match app-id="steam" title="^notificationtoasts"
