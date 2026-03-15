@@ -55,7 +55,7 @@
     "nmi_watchdog=0"
   ];
   boot.loader.timeout = 0;
-  boot.kernelPackages = pkgs.linuxPackages_lqx;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   boot.plymouth.enable = true;
 
