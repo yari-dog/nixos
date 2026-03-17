@@ -140,7 +140,7 @@
     xdg-utils
     python3
     # other
-    bitwarden-desktop
+    # bitwarden-desktop
     # bitwarden-cli
     # bitwarden-menu
 
