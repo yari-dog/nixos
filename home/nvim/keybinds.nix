@@ -12,6 +12,7 @@
 # ------ :'<,'>s/old/new to replace within visual sel (use numbers to specify instaead of a visual selection)
 # ------ :g/pattern/command runs the specified command on all lines
 # ------ :v/p/c does the same as above but the opposite, running it on all the non matching lines
+# ------ run @: to repeat last command, and then just @@ after that for subsequent repeats
 
 # ----- SOME LSP SHIT IS IN LSP.NIX RN. I NEED TO PULL THEM TOGETHER AT SOME POINT
 
