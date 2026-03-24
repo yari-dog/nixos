@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -10,8 +10,7 @@
   hardware.enableRedistributableFirmware = true;
 
   boot.kernelParams = [
-    "video=DP-1:3440x1440@75.050"
-    "video=HDMI-A-1:2560x1080@60,rotate=180"
+    "video=DP-1:3440x1440@74.98"
   ];
   environment.variables = {
     RUSTICL_ENABLE = "radeonsi";

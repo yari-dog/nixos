@@ -40,7 +40,7 @@
 
   services.easyeffects.enable = true;
 
-  # services.trayscale.enable = true;
+  services.trayscale.enable = true;
   services.gnome-keyring.enable = true;
   home.packages = with pkgs; [
     hyfetch

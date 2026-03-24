@@ -55,7 +55,7 @@
     "nmi_watchdog=0"
   ];
   boot.loader.timeout = 0;
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_stable;
 
   boot.plymouth.enable = true;
 
@@ -141,6 +141,8 @@
     enable = true;
     dockerCompat = true;
   };
+
+  qt.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

@@ -18,21 +18,16 @@
       SUBSYSTEM=="usb", ATTR{idVendor}=="096e", MODE="0664", GROUP="users"
     '';
   };
-  # services.mpd.enable = true;
-  # services.usbmuxd.enable = true;
+  services.mpd.enable = true;
 
   services.pipewire = {
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    #jack.enable = true;
-    # If you want to use JACK applications, uncomment this
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
+    jack.enable = true;
   };
+  services.pulseaudio.enable = false;
 
   services.tailscale.enable = true;
   networking.firewall.checkReversePath = "loose";
@@ -40,10 +35,8 @@
   services.udisks2.enable = true;
 
   services.gvfs.enable = true;
-  # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # disable mouse accel ? maybe ?
   services.libinput = {
     enable = true;
     mouse = {
@@ -51,10 +44,8 @@
     };
   };
 
-  # services.displayManager.gdm.enable = true;
   services.displayManager.lemurs.enable = true;
 
-  # Enable CUPS to print documents.
   services.printing.enable = true;
   services.printing.drivers = [ pkgs.epson-escpr2 ];
   services.avahi = {
@@ -62,9 +53,6 @@
     nssmdns4 = true;
     openFirewall = true;
   };
-
-  # Enable sound with pipewire.
-  services.pulseaudio.enable = false;
 
   services.gnome.gnome-keyring.enable = true;
 }
