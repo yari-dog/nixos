@@ -18,7 +18,7 @@
       SUBSYSTEM=="usb", ATTR{idVendor}=="096e", MODE="0664", GROUP="users"
     '';
   };
-  services.mpd.enable = true;
+  # services.mpd.enable = true;
   # services.usbmuxd.enable = true;
 
   services.pipewire = {
