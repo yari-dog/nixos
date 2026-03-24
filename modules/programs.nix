@@ -153,7 +153,6 @@
     winetricks
     pwvucontrol
     telegram-desktop
-    trayscale
 
     # for qute autofil
     # keyutils
