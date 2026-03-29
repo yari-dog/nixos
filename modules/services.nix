@@ -5,6 +5,7 @@
   services.irqbalance.enable = true;
   services.flatpak.enable = true;
 
+  services.blueman.enable = true;
   services.udev = {
     packages = with pkgs; [
       qmk
@@ -55,4 +56,5 @@
   };
 
   services.gnome.gnome-keyring.enable = true;
+
 }
