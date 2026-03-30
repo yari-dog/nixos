@@ -60,14 +60,7 @@
   boot.plymouth.enable = true;
 
   nix = {
-    optimise.automatic = true;
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
     settings = {
-      auto-optimise-store = true;
       max-jobs = "auto";
       substituters = [
         "https://nix-community.cachix.org"
@@ -115,7 +108,6 @@
       "disk"
       "storage"
       "render"
-      "podman"
       "gamemode"
     ];
     subGidRanges = [
@@ -137,12 +129,6 @@
 
   virtualisation.spiceUSBRedirection.enable = true;
   # hardware.keyboard.qmk.enable = true;
-  virtualisation.podman = {
-    enable = true;
-    dockerCompat = true;
-  };
-
-  qt.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

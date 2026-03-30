@@ -48,7 +48,7 @@ animations {
 }
 
 environment {
-  PROTON_USE_WAYLAND "1"
+  // PROTON_USE_WAYLAND "1"
   // CLUTTER_BACKEND "wayland"
   // // GDK_BACKEND "wayland,x11,*"
   // GDK_DPI_SCALE "1"
@@ -68,7 +68,6 @@ environment {
   // QT_FFMPEG_ENCODING_HW_DEVICE_TYPES "vaapi"
   // // fix java
     _JAVA_AWT_WM_NONREPARENTING "1"
-  RUSTICL_ENABLE "amdgpu"
   TERM "foot"
   TERMINAL "foot"
   EDITOR "nvim"

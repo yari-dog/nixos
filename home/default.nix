@@ -55,13 +55,13 @@
     inputs.tidaLuna.packages.${stdenv.hostPlatform.system}.default
   ];
 
-  programs.anki = {
-    enable = true;
-    profiles."User 1" = {
-      sync.username = "yari_dog@protonmail.com";
-      sync.keyFile = config.lib.file.mkOutOfStoreSymlink "/home/yari/.ankisecret";
-    };
-  };
+  # programs.anki = {
+  #   enable = true;
+  #   profiles."User 1" = {
+  #     sync.username = "yari_dog@protonmail.com";
+  #     sync.keyFile = config.lib.file.mkOutOfStoreSymlink "/home/yari/.ankisecret";
+  #   };
+  # };
 
   programs.irssi.enable = true;
 
