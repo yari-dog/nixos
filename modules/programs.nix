@@ -186,5 +186,7 @@
     gnome-software
     fastfetch
     macchina
+
+    ghidra-bin
   ];
 }
