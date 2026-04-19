@@ -29,6 +29,9 @@
       General = {
         Experimental = true;
         FastConnectable = true;
+        #uncomment after first connec
+        Enable = "Source,Sink,Media,Socket";
+        # ControllerMode = "bredr";
       };
       Police = {
         AutoEnable = true;
@@ -109,6 +112,7 @@
       "storage"
       "render"
       "gamemode"
+      "plugdev"
     ];
     subGidRanges = [
       {

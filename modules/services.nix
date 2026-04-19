@@ -28,7 +28,6 @@
     pulse.enable = true;
     jack.enable = true;
   };
-  services.pulseaudio.enable = false;
 
   services.tailscale.enable = true;
   networking.firewall.checkReversePath = "loose";
