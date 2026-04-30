@@ -188,5 +188,6 @@
     macchina
 
     ghidra-bin
+    audacity
   ];
 }
