@@ -189,5 +189,6 @@
 
     ghidra-bin
     audacity
+    patchelf
   ];
 }
