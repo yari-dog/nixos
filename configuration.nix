@@ -68,7 +68,6 @@
       substituters = [
         "https://nix-community.cachix.org"
         "https://cache.nixos.org/"
-        "https://nyx.chaotic.cx"
         "https://nix-community.cachix.org"
       ];
     };
