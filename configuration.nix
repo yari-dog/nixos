@@ -113,6 +113,7 @@
       "render"
       "gamemode"
       "plugdev"
+      "libvirtd"
     ];
     subGidRanges = [
       {
