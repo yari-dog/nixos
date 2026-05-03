@@ -3,6 +3,7 @@
 {
   imports = [
     ./fonts.nix
+    ./hardware.nix
     ./nix-ld.nix
     ./programs.nix
     ./security.nix
