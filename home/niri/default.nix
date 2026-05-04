@@ -6,8 +6,7 @@
 
 {
   home.packages = with pkgs; [
-    # xwayland-satellite
-    (callPackage ./package.nix { })
+    xwayland-satellite
     playerctl
   ];
 
