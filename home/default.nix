@@ -36,7 +36,7 @@
     };
   };
   programs.mpv.enable = true;
-  programs.discord.enable = true;
+  programs.vesktop.enable = true;
 
   services.easyeffects.enable = true;
 
