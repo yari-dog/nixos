@@ -192,5 +192,6 @@
     audacity
     patchelf
     firefox
+    mullvad-browser
   ];
 }
