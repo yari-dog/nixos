@@ -24,6 +24,10 @@
   --tridactyl-highlight-box-bg: var(--base0B);
   --tridactyl-highlight-box-fg: var(--base00);
 
+  --tridactyl-header-first-bg: var(--base01);
+  --tridactyl-header-second-bg: var(--base01);
+  --tridactyl-header-third-bg: var(--base01);
+
   /* Hint character tags */
   --tridactyl-hintspan-fg: var(--base00) !important;
   --tridactyl-hintspan-bg: var(--base0A) !important;
@@ -31,9 +35,9 @@
   /* Element highlights */
   --tridactyl-hint-active-fg: none;
   --tridactyl-hint-active-bg: none;
-  --tridactyl-hint-active-outline: none;
+  --tridactyl-hint-active-outline: 2px solid var(--base08);
   --tridactyl-hint-bg: none;
-  --tridactyl-hint-outline: none;
+  --tridactyl-hint-outline: 2px solid var(--base0A);
 }
 
 /* Status indicator */

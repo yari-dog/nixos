@@ -5,6 +5,8 @@ sanitize tridactyllocal tridactylsync
 
 " general settings -----------------
 set hintchars arstgmneio
+set hintstyles.fg none
+set hintfiltermode vimperator-reflow
 set smoothscroll true
 set editorcmd foot nvim 
 set allowautofocus true
@@ -13,7 +15,6 @@ set externalclipboardcmd wl-copy
 set escapehatchsidebarhack false " stops it from closing sideberry
 set completions.Tab.statusstylepretty true 
 set completions.History.autoselect true
-set hintfiltermode vimperator-reflow
 set searchurls.amazon https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=
 setnull searchurls.twitter
 set searchurlweight 10
@@ -59,8 +60,8 @@ bind / fillcmdline find
 bind h findnext
 bind H findnext --reverse
 
-bind m scrollpage -0.5
-bind k scrollpage 0.5 
+bind m scrollpage -0.3
+bind k scrollpage 0.3
 
 unbind <C-e>
 unbind <C-b>
