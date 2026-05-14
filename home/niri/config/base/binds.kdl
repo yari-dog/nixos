@@ -3,9 +3,7 @@ binds {
 
     Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
     Mod+Semicolon hotkey-overlay-title="Run an Application: rofi" { spawn-sh "~/.config/rofi/menu/launcher.sh"; }
-    // Mod+W hotkey-overlay-title="Run an Application: qutebrowser" { spawn "qutebrowser"; }
-    // Mod+W hotkey-overlay-title="Run an Application: helium" { spawn "helium"; }
-    Mod+W hotkey-overlay-title="Run an Application: mullvad browser" { spawn "mullvad-browser"; }
+    Mod+W hotkey-overlay-title="Run an Application: zen" { spawn "zen"; }
     Mod+Y hotkey-overlay-title="Run an Application: yazi" { spawn "foot" "yazi"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+L hotkey-overlay-title="Lock dialog" { spawn-sh "~/.config/rofi/menu/powermenu.sh"; }

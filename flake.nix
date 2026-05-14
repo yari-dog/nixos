@@ -14,6 +14,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     helium.url = "github:FKouhai/helium2nix/main";
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     stylix = {
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -34,6 +38,7 @@
       nixos-hardware,
       nixos-xivlauncher-rb,
       helium,
+      zen-browser,
       stylix,
       nixvim,
       nix-flatpak,
@@ -51,6 +56,7 @@
             nixos-hardware
             nixos-xivlauncher-rb
             helium
+            zen-browser
             stylix
             nixvim
             nix-flatpak

@@ -10,6 +10,7 @@
   imports = [
     ./waybar
     ./qutebrowser
+    ./zen-browser
     ./rofi
     ./shell
     ./mako
