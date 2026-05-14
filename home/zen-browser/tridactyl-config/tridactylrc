@@ -55,12 +55,12 @@ bind ge tabnext
 bind gi tabprev
 bind go forward
 
-" bind / fillcmdline find
-" bind h findnext
-" bind H findnext --reverse
+bind / fillcmdline find
+bind h findnext
+bind H findnext --reverse
 
-bind h scrollpage 0.5 
-bind , scrollpage -0.5
+bind m scrollpage -0.5
+bind k scrollpage 0.5 
 
 unbind <C-e>
 unbind <C-b>
