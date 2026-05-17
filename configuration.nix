@@ -45,6 +45,7 @@
         "https://cache.nixos.org/"
       ];
     };
+    package = pkgs.lixPackageSets.stable.lix;
   };
 
   # Enable networking
