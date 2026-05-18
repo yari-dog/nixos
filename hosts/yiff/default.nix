@@ -10,7 +10,8 @@
   hardware.enableRedistributableFirmware = true;
 
   boot.kernelParams = [
-    "video=DP-1:3440x1440@75.050"
+    "video=DP-1:3440x1440@143.923"
+    "video=DP-2:3440x1440@75.050"
   ];
   # environment.variables = {
   #   RUSTICL_ENABLE = "radeonsi";
