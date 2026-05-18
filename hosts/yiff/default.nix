@@ -54,5 +54,6 @@
     (xivlauncher-rb.override { useGameMode = true; })
     clinfo
     vtfedit
+    liquidctl
   ];
 }
