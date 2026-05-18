@@ -1,8 +1,10 @@
 binds {
-    Mod+Shift+Slash { show-hotkey-overlay; }
+    Mod+Ctrl+Slash { show-hotkey-overlay; }
 
     Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
     Mod+Semicolon hotkey-overlay-title="Run an Application: rofi" { spawn-sh "~/.config/rofi/menu/launcher.sh"; }
+    // Mod+W hotkey-overlay-title="Run an Application: qutebrowser" { spawn "qutebrowser"; }
+    // Mod+W hotkey-overlay-title="Run an Application: helium" { spawn "helium"; }
     Mod+W hotkey-overlay-title="Run an Application: zen" { spawn "zen"; }
     Mod+Y hotkey-overlay-title="Run an Application: yazi" { spawn "foot" "yazi"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
@@ -39,8 +41,8 @@ binds {
 
     Mod+H { focus-column-first; }
     Mod+Slash { focus-column-last; }
-    Mod+Ctrl+H { move-column-to-first; }
-    Mod+Ctrl+Slash  { move-column-to-last; }
+    Mod+Shift+H { move-column-to-first; }
+    Mod+Shift+Slash  { move-column-to-last; }
 
     Mod+Ctrl+N     { move-column-to-monitor-left; }
     Mod+Ctrl+E     { move-column-to-monitor-down; }
