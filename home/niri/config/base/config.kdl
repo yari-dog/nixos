@@ -131,6 +131,11 @@ window-rule {
     block-out-from "screencast"
 }
 
+window-rule {
+    match app-id="tf_linux64"
+    variable-refresh-rate true
+}
+
 layer-rule {
     match namespace="^notifications"
     block-out-from "screen-capture"

@@ -2,7 +2,7 @@ output "DP-1" {
     mode "3440x1440@143.923"
     scale 1
     position x=0 y=1440//1080
-    variable-refresh-rate
+    variable-refresh-rate on-demand=true
     focus-at-startup
 }
 
