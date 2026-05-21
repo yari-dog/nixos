@@ -37,7 +37,24 @@
     };
   };
   programs.mpv.enable = true;
-  programs.vesktop.enable = true;
+
+  programs.vesktop = {
+    enable = true;
+
+    vencord.settings = {
+      autoUpdate = true;
+      autoUpdateNotification = true;
+      notifyAboutUpdates = true;
+
+      plugins = {
+        ClearURLs.enabled = true;
+        FixYoutubeEmbeds.enabled = true;
+        VolumeBooster.enabled = true;
+        AnonymiseFileNames.enabled = true;
+        YoutubeAdblock.enabled = true;
+      };
+    };
+  };
 
   services.easyeffects.enable = true;
 
