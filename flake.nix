@@ -7,8 +7,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware/master";
+    };
+    nixpkgs-xr = {
+      url = "github:nix-community/nixpkgs-xr";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixos-xivlauncher-rb = {
       url = "github:The1Penguin/nixos-xivlauncher-rb";
       inputs.nixpkgs.follows = "nixpkgs";
