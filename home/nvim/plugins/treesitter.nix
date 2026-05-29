@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   # Highlight, edit, and navigate code
   # https://nix-community.github.io/nixvim/plugins/treesitter/index.html
@@ -7,7 +7,9 @@
 
     # Installing tree-sitter grammars from Nixpkgs (recommended)
     # https://nix-community.github.io/nixvim/plugins/treesitter/index.html#installing-tree-sitter-grammars-from-nixpkgs
-    grammarPackages = pkgs.vimPlugins.nvim-treesitter.passthru.allGrammars;
+    # grammarPackages = pkgs.vimPlugins.nvim-treesitter.passthru.allGrammars;
+
+    grammarPackages = config.plugins.treesitter.package.allGrammars;
 
     settings = {
       # Installing tree-sitter grammars from nvim-treesitter
