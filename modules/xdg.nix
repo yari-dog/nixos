@@ -5,8 +5,8 @@
     defaultApplications = {
       "image/*" = [ "feh.desktop" ];
       "video/*" = [ "mpv.desktop" ];
-      "x-scheme-handler/http" = [ "helium.desktop" ];
-      "x-scheme-handler/https" = [ "helium.desktop" ];
+      "x-scheme-handler/http" = [ "zen.desktop" ];
+      "x-scheme-handler/https" = [ "zen.desktop" ];
       # if steam links arent opening my current fix is that x-scheme-handler/steam needs to be in .local/share/applications/mimelist.cache for some reason. no fucking idea why
     };
     removedAssociations = {

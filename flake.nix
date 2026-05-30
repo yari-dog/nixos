@@ -18,7 +18,6 @@
       url = "github:The1Penguin/nixos-xivlauncher-rb";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    helium.url = "github:FKouhai/helium2nix/main";
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,10 +26,7 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixvim.url = "github:nix-community/nixvim";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     tidaLuna.url = "github:Inrixia/TidaLuna";
   };
@@ -42,7 +38,6 @@
       home-manager,
       nixos-hardware,
       nixos-xivlauncher-rb,
-      helium,
       zen-browser,
       stylix,
       nixvim,
@@ -60,7 +55,6 @@
             home-manager
             nixos-hardware
             nixos-xivlauncher-rb
-            helium
             zen-browser
             stylix
             nixvim

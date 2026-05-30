@@ -1,111 +1,33 @@
 {
-  config,
   pkgs,
-  lib,
-  inputs,
   ...
 }:
 
 {
   imports = [
-    ./waybar
-    ./qutebrowser
-    ./zen-browser
-    ./rofi
-    ./shell
-    ./mako
+    ./environment
     ./font
+    ./mako
     ./niri
     ./nvim
-    ./yazi
+    ./programs
+    ./qutebrowser
+    ./rofi
+    ./shell
+    ./waybar
     ./xdg
-    ./environment
+    ./yazi
+    ./zen-browser
   ];
 
-  # pkgs.config.chromium.enableWideVine = true;
   home.username = "yari";
   home.homeDirectory = "/home/yari";
   home.stateVersion = "26.05";
-  programs.git = {
-    enable = true;
-    settings = {
-      user = {
-        name = "yari :3";
-        email = "yari@woofwoofwoof.net";
-      };
-      init.defaultBranch = "main";
-    };
-  };
-  programs.mpv.enable = true;
-
-  programs.vesktop = {
-    enable = true;
-
-    vencord.settings = {
-      autoUpdate = true;
-      autoUpdateNotification = true;
-      notifyAboutUpdates = true;
-
-      plugins = {
-        ClearURLs.enabled = true;
-        FixYoutubeEmbeds.enabled = true;
-        VolumeBooster.enabled = true;
-        AnonymiseFileNames.enabled = true;
-        YoutubeAdblock.enabled = true;
-      };
-    };
-  };
 
   services.easyeffects.enable = true;
 
   services.trayscale.enable = true;
   services.gnome-keyring.enable = true;
-  home.packages = with pkgs; [
-    hyfetch
-    foot
-    lua-language-server
-    prismlauncher
-    gruvbox-dark-gtk
-    qbittorrent
-    inputs.helium.defaultPackage.${stdenv.hostPlatform.system}
-    # TODO: switch back to old one when openldap gets fixed
-    # lutris
-    (pkgs.lutris.override {
-      # Intercept buildFHSEnv to modify target packages
-      buildFHSEnv =
-        args:
-        pkgs.buildFHSEnv (
-          args
-          // {
-            multiPkgs =
-              envPkgs:
-              let
-                # Fetch original package list
-                originalPkgs = args.multiPkgs envPkgs;
-
-                # Disable tests for openldap
-                customLdap = envPkgs.openldap.overrideAttrs (_: {
-                  doCheck = false;
-                });
-              in
-              # Replace broken openldap with the custom one
-              builtins.filter (p: (p.pname or "") != "openldap") originalPkgs ++ [ customLdap ];
-          }
-        );
-    })
-    qpwgraph
-    inputs.tidaLuna.packages.${stdenv.hostPlatform.system}.default
-  ];
-
-  # programs.anki = {
-  #   enable = true;
-  #   profiles."User 1" = {
-  #     sync.username = "yari_dog@protonmail.com";
-  #     sync.keyFile = config.lib.file.mkOutOfStoreSymlink "/home/yari/.ankisecret";
-  #   };
-  # };
-
-  programs.irssi.enable = true;
 
   stylix.targets.starship.enable = false;
   stylix.targets.gtk.enable = false;
