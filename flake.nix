@@ -2,30 +2,13 @@
   description = "flake config";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nixos-hardware = {
-      url = "github:NixOS/nixos-hardware/master";
-    };
-    nixpkgs-xr = {
-      url = "github:nix-community/nixpkgs-xr";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nixos-xivlauncher-rb = {
-      url = "github:The1Penguin/nixos-xivlauncher-rb";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    zen-browser = {
-      url = "github:youwen5/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    stylix = {
-      url = "github:nix-community/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixpkgs.url = "nixpkgs/nixpkgs-unstable";
+    home-manager.url = "github:nix-community/home-manager";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
+    nixos-xivlauncher-rb.url = "github:The1Penguin/nixos-xivlauncher-rb";
+    zen-browser.url = "github:youwen5/zen-browser-flake";
+    stylix.url = "github:nix-community/stylix";
     nixvim.url = "github:nix-community/nixvim";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     tidaLuna.url = "github:Inrixia/TidaLuna";
