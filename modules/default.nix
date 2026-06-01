@@ -4,6 +4,7 @@
   imports = [
     ./fonts.nix
     ./hardware.nix
+    ./greetd.nix
     ./nix-ld.nix
     ./programs.nix
     ./security.nix

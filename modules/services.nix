@@ -44,7 +44,7 @@
     };
   };
 
-  services.displayManager.lemurs.enable = true;
+  # services.displayManager.lemurs.enable = true;
 
   services.printing.enable = true;
   services.printing.drivers = [ pkgs.epson-escpr2 ];
