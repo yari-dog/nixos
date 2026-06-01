@@ -1,3 +1,4 @@
+# jesus christ thank you random github user https://github.com/sjcobb2022/nixos-config/blob/main/hosts/common/optional/greetd.nix
 {
   pkgs,
   inputs,
