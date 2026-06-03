@@ -13,7 +13,7 @@ in
     enable = true;
     settings = {
       default_session = {
-        command = "${tuigreet} --time --remember --remember-session --sessions ${niri-session}";
+        command = "${tuigreet} --asterisks --time --remember --remember-session --sessions ${niri-session}";
         user = "greeter";
       };
     };
