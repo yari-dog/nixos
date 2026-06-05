@@ -193,5 +193,6 @@
     patchelf
     firefox
     mullvad-browser
+    gimp
   ];
 }
