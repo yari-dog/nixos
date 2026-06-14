@@ -70,7 +70,7 @@
     servers = {
       basedpyright.enable = true; # python and shit
       clangd.enable = true; # c and stuff
-      cmake-language-server.enable = true; # makefiles
+      cmake.enable = true; # makefiles
       nil_ls.enable = true; # nix
       ts_ls.enable = true; # typescript
 
