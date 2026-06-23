@@ -15,10 +15,13 @@
       "image/*" = [
         "org.qutebrowser.qutebrowser.desktop"
         "helium.desktop"
+        "gimp.desktop"
+        "org.darktable.darktable.desktop"
       ];
       "application/zip" = [ "org.prismlauncher.PrismLauncher.desktop" ];
     };
   };
+
   xdg.portal = {
     enable = true;
     wlr.enable = true;
