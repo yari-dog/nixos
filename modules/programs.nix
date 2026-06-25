@@ -194,5 +194,6 @@
     firefox
     mullvad-browser
     gimp
+    deezer-enhanced
   ];
 }
