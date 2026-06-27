@@ -1,10 +1,14 @@
 {
   pkgs,
   host,
+  inputs,
   ...
 }:
 
 {
+  imports = [
+    inputs.wayland-pipewire-idle-inhibit.homeModules.default
+  ];
   home.packages = with pkgs; [
     xwayland-satellite
     playerctl
@@ -69,6 +73,23 @@
       Restart = "on-failure";
       RestartSec = 1;
       TimeoutStopSec = 10;
+    };
+  };
+  services.wayland-pipewire-idle-inhibit = {
+    enable = true;
+    systemdTarget = "graphical-session.target";
+    settings = {
+      verbosity = "INFO";
+      media_minimum_duration = 10;
+      idle_inhibitor = "wayland";
+      # examples
+      sink_whitelist = [
+        { name = "Starship/Matisse HD Audio Controller Analog Stereo"; }
+      ];
+      node_blacklist = [
+        { name = "spotify"; }
+        { app_name = "Music Player Daemon"; }
+      ];
     };
   };
 }

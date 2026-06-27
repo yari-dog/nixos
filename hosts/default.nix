@@ -8,6 +8,7 @@
   stylix,
   nix-flatpak,
   tidaLuna,
+  wayland-pipewire-idle-inhibit,
   ...
 }:
 

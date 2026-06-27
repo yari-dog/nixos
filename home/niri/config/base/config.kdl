@@ -141,8 +141,5 @@ layer-rule {
     block-out-from "screen-capture"
 }
 
-// spawn-at-startup "dbus-update-activation-environment" "--systemd" "--all"
-// spawn-at-startup "systemctl" "--user" "import-environment" "DISPLAY" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
-// spawn-at-startup "hash dbus-update-activation-environment" "2>/dev/null"
-spawn-at-startup "waybar"
 spawn-at-startup "bitwarden"
+spawn-sh-at-startup "sleep 2; systemctl --user restart easyeffects.service"

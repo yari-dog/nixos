@@ -12,6 +12,7 @@
     nixvim.url = "github:nix-community/nixvim";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     tidaLuna.url = "github:Inrixia/TidaLuna";
+    wayland-pipewire-idle-inhibit.url = "github:rafaelrc7/wayland-pipewire-idle-inhibit";
   };
   outputs =
     inputs@{
@@ -26,6 +27,7 @@
       nixvim,
       nix-flatpak,
       tidaLuna,
+      wayland-pipewire-idle-inhibit,
     }:
     {
       nixosConfigurations = (
@@ -43,6 +45,7 @@
             nixvim
             nix-flatpak
             tidaLuna
+            wayland-pipewire-idle-inhibit
             ;
         }
       );
