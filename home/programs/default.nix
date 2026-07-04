@@ -77,5 +77,6 @@
     darktable
     qpwgraph
     inputs.tidaLuna.packages.${stdenv.hostPlatform.system}.default
+    digikam
   ];
 }
