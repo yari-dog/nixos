@@ -158,7 +158,7 @@
     # for qute autofil
     # keyutils
 
-    # libimobiledevice
+    libimobiledevice
     # ifuse
     remmina
     p7zip
@@ -195,5 +195,6 @@
     mullvad-browser
     gimp
     deezer-enhanced
+
   ];
 }
