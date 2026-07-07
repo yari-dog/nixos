@@ -195,6 +195,6 @@
     mullvad-browser
     gimp
     deezer-enhanced
-
+    nix-index
   ];
 }
