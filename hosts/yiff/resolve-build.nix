@@ -174,7 +174,7 @@ let
           test -e ${lib.escapeShellArg appimageName}
           appimage-exec.sh -x $out ${lib.escapeShellArg appimageName}
 
-          mkdir -p $out/{"Apple Immersive/Calibration",configs,DolbyVision,easyDCP,Extras,Fairlight,GPUCache,logs,Media,"Resolve Disk Database",.crashreport,.license,.LUT}
+          mkdir -p $out/{"Apple Immersive/Calibration",configs,DolbyVision,easyDCP,Extras,Fairlight,GPUCache,IOPlugins,logs,Media,"Resolve Disk Database",.crashreport,.license,.LUT}
 
           # Install udev rules for Blackmagic hardware (color panels, Speed Editor, Editor Keyboard)
           mkdir -p $out/lib/udev/rules.d
@@ -315,6 +315,7 @@ buildFHSEnv {
       dbus
       expat
       fontconfig
+      ffmpeg
       freetype
       glib
       libGL
@@ -364,10 +365,12 @@ buildFHSEnv {
     ];
 
   extraPreBwrapCmds = lib.optionalString studioVariant ''
+    mkdir -p ~/.local/share/DaVinciResolve/IOPlugins || exit 1
     mkdir -p ~/.local/share/DaVinciResolve/Extras || exit 1
   '';
 
   extraBwrapArgs = lib.optionals studioVariant [
+    ''--bind "$HOME"/.local/share/DaVinciResolve/IOPlugins ${davinci}/IOPlugins''
     ''--bind "$HOME"/.local/share/DaVinciResolve/Extras ${davinci}/Extras''
   ];
 
