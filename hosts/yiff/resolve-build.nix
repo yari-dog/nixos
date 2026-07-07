@@ -333,6 +333,7 @@ buildFHSEnv {
       python3
       python3.pkgs.numpy
       libdrm # libdrm.so.2 needed by bundled Qt6 WebEngine (Control Panels Setup)
+      libva # needed by ffmpeg encoder plugin
       libxkbfile # libxkbfile.so.1 needed by bundled Qt6 WebEngine (Control Panels Setup)
       krb5 # libgssapi_krb5.so.2 needed by bundled Qt6 (Control Panels Setup, Fairlight Studio Utility)
       nss # libsmime3.so needed by bundled Qt6 (Control Panels Setup)
