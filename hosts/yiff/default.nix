@@ -14,9 +14,6 @@
     "video=DP-2:3440x1440@75.050"
   ];
 
-  environment.variables = {
-    RUSTICL_ENABLE = "radeonsi";
-  };
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
