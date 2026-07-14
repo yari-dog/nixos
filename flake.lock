@@ -68,6 +68,38 @@
         "type": "github"
       }
     },
+    "cosmic-ext-alternative-startup": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1732452596,
+        "narHash": "sha256-0kqn3hZ58uQMl39XXF94yQS1EWmGIK45/JFTAigg/3M=",
+        "owner": "Drakulix",
+        "repo": "cosmic-ext-alternative-startup",
+        "rev": "8ceda00197c7ec0905cf1dccdc2d67d738e45417",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Drakulix",
+        "repo": "cosmic-ext-alternative-startup",
+        "type": "github"
+      }
+    },
+    "cosmic-ext-extra-sessions": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1743593657,
+        "narHash": "sha256-6JiWdBry63NrnmK3mt9gGSDAcyx/f6L5QsIgZSUakQI=",
+        "owner": "Drakulix",
+        "repo": "cosmic-ext-extra-sessions",
+        "rev": "66e065728d81eab86171e542dad08fb628c88494",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Drakulix",
+        "repo": "cosmic-ext-extra-sessions",
+        "type": "github"
+      }
+    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -542,6 +574,8 @@
     },
     "root": {
       "inputs": {
+        "cosmic-ext-alternative-startup": "cosmic-ext-alternative-startup",
+        "cosmic-ext-extra-sessions": "cosmic-ext-extra-sessions",
         "home-manager": "home-manager",
         "nix-flatpak": "nix-flatpak",
         "nixos-hardware": "nixos-hardware",

@@ -13,6 +13,15 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     tidaLuna.url = "github:Inrixia/TidaLuna";
     wayland-pipewire-idle-inhibit.url = "github:rafaelrc7/wayland-pipewire-idle-inhibit";
+    cosmic-ext-alternative-startup = {
+      url = "github:Drakulix/cosmic-ext-alternative-startup";
+      flake = false;
+    };
+
+    cosmic-ext-extra-sessions = {
+      url = "github:Drakulix/cosmic-ext-extra-sessions";
+      flake = false;
+    };
   };
   outputs =
     inputs@{
@@ -28,6 +37,8 @@
       nix-flatpak,
       tidaLuna,
       wayland-pipewire-idle-inhibit,
+      cosmic-ext-alternative-startup,
+      cosmic-ext-extra-sessions,
     }:
     {
       nixosConfigurations = (
