@@ -20,7 +20,7 @@
 cwd = { fg = "#83a598" }
 
 # Hovered
-hovered         = { fg = "#282828", bg = "#83a598" }
+hovered         = { fg = "#282828", bg = "#8ec07c" }
 preview_hovered = { underline = true }
 
 # Find
@@ -42,9 +42,16 @@ border_style  = { fg = "#665c54" }
 
 # Highlighting
 # syntect_theme = "~/.config/yazi/Gruvbox-Dark.tmTheme"
-
+# Symlink
+symlink_target = { italic = true }
 # : }}}
 
+[tabs]
+active   = { fg = "#282828", bg = "#504945" }
+inactive = { fg = "#a89984", bg = "#3c3836" }
+
+sep_inner = { open = "[", close = "]" }
+sep_outer = { open = "", close = "" }
 
 # : Status {{{
 
@@ -146,24 +153,43 @@ footer  = { fg = "#3c3836", bg = "#a89984" }
 
 rules = [
     # Images
-    { mime = "image/*", fg = "#83a598" },
+    { mime = "image/*", fg = "#fb4934" },
 
     # Videos
-    { mime = "video/*", fg = "#b8bb26" },
-    { mime = "audio/*", fg = "#b8bb26" },
+    { mime = "video/*", fg = "#d3869b" },
+    { mime = "audio/*", fg = "#fabd2f" },
 
     # Archives
-    { mime = "application/zip",             fg = "#fe8019" },
-    { mime = "application/gzip",            fg = "#fe8019" },
-    { mime = "application/x-tar",           fg = "#fe8019" },
-    { mime = "application/x-bzip",          fg = "#fe8019" },
-    { mime = "application/x-bzip2",         fg = "#fe8019" },
-    { mime = "application/x-7z-compressed", fg = "#fe8019" },
-    { mime = "application/x-rar",           fg = "#fe8019" },
+    { mime = "application/*zip",             fg = "#fe8019" },
+    { mime = "application/x-{tar,bzip*,7z-compressesd,rar}",           fg = "#fe8019" },
+    
+    # Documents
+    { mime = "application/*", fg = "#689d6a" },
+    { url = "*", is = "exec", fg = "#689d6a" },
+
+	# Empty file
+	{ mime = "inode/empty", fg = "#928374" },
+	# Orphan symbolic links
+	{ url = "*", is = "orphan", fg = "#fb4934" },
 
     # Fallback
-    { url = "*", fg = "#a89984" },
-    { url = "*/", fg = "#83a598" }
+    { url = "*", fg = "#ebdbb2" },
+    # { url = "*", is = "{link/sock}" fg = "#928374" },
+    # { url = "*", is = "exec" fg = "#b8bb26" },
+    { url = "*/", fg = "#8ec07c" }
 ]
 
 # : }}}
+
+[icon]
+dirs = []
+files = []
+globs = []
+exts = []
+conds = [
+  { if = "dir", text = "" },
+  { if = "exec", text = "" },
+  { if = "!dir", text = "" },
+]
+[indicator]
+padding = { open = "▐", close = "▌" }

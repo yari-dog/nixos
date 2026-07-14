@@ -9,7 +9,7 @@ input {
 }
 
 layout {
-    gaps 2
+    gaps 10
 
     center-focused-column "never"
     always-center-single-column
@@ -24,8 +24,8 @@ layout {
     focus-ring {
         width 2
 
-        active-color "#ebdbb2"
-        inactive-color "#928374"
+        active-color "#8ec07c"
+        inactive-color "#689d6a"
     }
 
     background-color "#282828"
@@ -141,5 +141,6 @@ layer-rule {
     block-out-from "screen-capture"
 }
 
+spawn-at-startup "cosmic-ext-alternative-startup"
 spawn-at-startup "bitwarden"
-spawn-sh-at-startup "sleep 2; systemctl --user restart easyeffects.service"
+// spawn-sh-at-startup "sleep 2; systemctl --user restart easyeffects.service"
