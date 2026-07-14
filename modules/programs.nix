@@ -196,5 +196,6 @@
     gimp
     deezer-enhanced
     nix-index
+    yt-dlp
   ];
 }
