@@ -1,40 +1,37 @@
 { pkgs, host, ... }:
 {
-  programs.nh = {
+  programs.bash = {
     enable = true;
+    # interactiveShellInit = ''
+    #   if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
+    #   then
+    #     shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
+    #     exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
+    #   fi
+    # '';
   };
-
-  programs.steam = {
-    enable = true;
-    protontricks.enable = true;
-  };
-
-  programs.thunar.enable = true;
 
   programs.dconf.enable = true;
-  stylix = {
+
+  programs.fish = {
     enable = true;
-    autoEnable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
-    # image = ../../wallpapers/bg.png;
-    polarity = "dark";
-    cursor = {
-      package = pkgs.capitaine-cursors-themed;
-      name = "Capitaine Cursors (Gruvbox)";
-      size = 18;
+
+    shellAliases = {
+      ns = "nh os switch ~/nix -H ${host.hostName}";
+      gg = "cd ../";
+      htop = "btop";
+      cat = "bat";
+      fuck = "f";
+      nix-shell = "nix-shell --command fish";
     };
-    fonts = {
-      serif.name = "Sarasa Term J Nerd Font";
-      sansSerif.name = "Sarasa Term J Nerd Font";
-      monospace.name = "Sarasa Term J Nerd Font";
-    };
-    icons = {
-      package = pkgs.gruvbox-dark-icons-gtk;
-      dark = "oomox-gruvbox-dark";
-      light = "oomox-gruvbox-dark";
-      enable = true;
-    };
-    enableReleaseChecks = false;
+
+    interactiveShellInit = ''
+      set fish_greeting
+        function last_history_item
+            echo $history[1]
+        end
+        abbr -a !! --position anywhere --function last_history_item
+    '';
   };
 
   programs.gamemode = {
@@ -59,38 +56,9 @@
     };
   };
 
+  programs.nh.enable = true;
+
   programs.niri.enable = true;
-
-  programs.fish = {
-    enable = true;
-
-    shellAliases = {
-      ns = "nh os switch ~/nix -H ${host.hostName}";
-      gg = "cd ../";
-      htop = "btop";
-      cat = "bat";
-      fuck = "f";
-      nix-shell = "nix-shell --command fish";
-    };
-
-    interactiveShellInit = ''
-      set fish_greeting
-        function last_history_item
-            echo $history[1]
-        end
-        abbr -a !! --position anywhere --function last_history_item
-    '';
-  };
-
-  programs.bash = {
-    interactiveShellInit = ''
-      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
-      then
-        shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
-        exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
-      fi
-    '';
-  };
 
   programs.obs-studio = {
     enable = true;
@@ -103,6 +71,38 @@
       obs-gstreamer
       obs-vkcapture
     ];
+  };
+
+  programs.steam = {
+    enable = true;
+    protontricks.enable = true;
+  };
+
+  programs.thunar.enable = true;
+
+  stylix = {
+    enable = true;
+    autoEnable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+    # image = ../../wallpapers/bg.png;
+    polarity = "dark";
+    cursor = {
+      package = pkgs.capitaine-cursors-themed;
+      name = "Capitaine Cursors (Gruvbox)";
+      size = 18;
+    };
+    fonts = {
+      serif.name = "Sarasa Term J Nerd Font";
+      sansSerif.name = "Sarasa Term J Nerd Font";
+      monospace.name = "Sarasa Term J Nerd Font";
+    };
+    icons = {
+      package = pkgs.gruvbox-dark-icons-gtk;
+      dark = "oomox-gruvbox-dark";
+      light = "oomox-gruvbox-dark";
+      enable = true;
+    };
+    enableReleaseChecks = false;
   };
 
   # List packages installed in system profile. To search, run:
@@ -192,10 +192,10 @@
     audacity
     patchelf
     firefox
-    mullvad-browser
     gimp
     deezer-enhanced
     nix-index
     yt-dlp
+    video-trimmer
   ];
 }

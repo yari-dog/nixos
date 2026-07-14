@@ -104,6 +104,8 @@
     packages = with pkgs; [
       #  thunderbird
     ];
+
+    shell = pkgs.fish;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
