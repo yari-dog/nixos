@@ -70,6 +70,8 @@
       obs-vaapi # optional AMD hardware acceleration
       obs-gstreamer
       obs-vkcapture
+      obs-source-record
+      (pkgs.callPackage ./obs-branch-output.nix { })
     ];
   };
 
