@@ -199,5 +199,6 @@
     nix-index
     yt-dlp
     video-trimmer
+    baobab
   ];
 }
