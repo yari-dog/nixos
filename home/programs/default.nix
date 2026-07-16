@@ -11,7 +11,17 @@
       init.defaultBranch = "main";
     };
   };
-  programs.mpv.enable = true;
+  programs.mpv = {
+    enable = true;
+    scripts = with pkgs.mpvScripts; [
+      uosc
+      sponsorblock
+      cut
+    ];
+    config = {
+      keep-open = "yes";
+    };
+  };
 
   programs.vesktop = {
     enable = true;
