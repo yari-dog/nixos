@@ -20,6 +20,7 @@
     ];
     config = {
       keep-open = "yes";
+      hwdec = "auto";
     };
   };
 
