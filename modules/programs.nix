@@ -73,6 +73,11 @@
       obs-source-record
       (pkgs.callPackage ./obs-branch-output.nix { })
     ];
+    package = (
+      pkgs.obs-studio.override {
+        cudaSupport = true;
+      }
+    );
   };
 
   programs.steam = {
