@@ -80,6 +80,10 @@
     );
   };
 
+  programs.appimage = {
+    enable = true;
+  };
+
   programs.steam = {
     enable = true;
     protontricks.enable = true;
