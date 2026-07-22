@@ -18,6 +18,7 @@
     enable = true;
     extraPackages = with pkgs; [
       mesa.opencl # Enables Rusticl (OpenCL) support
+      nvidia-vaapi-driver
     ];
   };
 
