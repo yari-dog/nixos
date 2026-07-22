@@ -22,6 +22,7 @@
   };
 
   hardware.amdgpu.opencl.enable = true;
+  hardware.amdgpu.zluda.enable = true;
 
   hardware.nvidia.open = false;
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
