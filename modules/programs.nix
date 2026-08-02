@@ -82,6 +82,11 @@
 
   programs.appimage = {
     enable = true;
+    package = (
+      pkgs.appimage-run.override {
+        extraPkgs = pkgs: [ pkgs.libunwind ];
+      }
+    );
   };
 
   programs.steam = {

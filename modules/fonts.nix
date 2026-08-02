@@ -1,15 +1,17 @@
 { pkgs, ... }:
 {
   fonts.packages = with pkgs; [
-    noto-fonts
+    # noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-color-emoji
-    liberation_ttf
-    fira-code
-    fira-code-symbols
-    mplus-outline-fonts.githubRelease
-    dina-font
-    proggyfonts
-    nerd-fonts.dejavu-sans-mono
+    # liberation_ttf
+    # fira-code
+    # fira-code-symbols
+    # mplus-outline-fonts.githubRelease
+    # dina-font
+    # proggyfonts
+    # nerd-fonts.dejavu-sans-mono
+    corefonts
+    vista-fonts
   ];
 }
