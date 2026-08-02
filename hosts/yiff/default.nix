@@ -56,7 +56,7 @@
     # libsurvive
     # basalt-monado
     # wayvr-dashboard
-    # (xivlauncher-rb.override { useGameMode = true; })
+    (xivlauncher-rb.override { useGameMode = true; })
     clinfo
     vtfedit
     liquidctl
