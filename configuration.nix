@@ -34,6 +34,7 @@
   ];
   boot.loader.timeout = 0;
   boot.kernelPackages = pkgs.linuxPackages_xanmod_stable;
+  boot.kernelModules = [ "ntsync" ];
 
   boot.plymouth.enable = true;
 

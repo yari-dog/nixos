@@ -13,8 +13,9 @@
       via
       vial
     ];
+    # KERNEL=="ntsync", MODE="0660", TAG+="uaccess"
     extraRules = ''
-            KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="6964", ATTRS{idProduct}=="0075", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl" 
+      KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="6964", ATTRS{idProduct}=="0075", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl" 
       SUBSYSTEM=="usb", ATTR{idVendor}=="096e", TAG+="uaccess"
       SUBSYSTEM=="usb", ATTR{idVendor}=="096e", MODE="0664", GROUP="users"
     '';
