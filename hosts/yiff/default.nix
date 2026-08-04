@@ -25,8 +25,15 @@
   hardware.amdgpu.opencl.enable = true;
   hardware.amdgpu.zluda.enable = true;
 
-  hardware.nvidia.open = false;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
+  hardware.nvidia = {
+    open = false;
+    # package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
+    branch = "legacy_580";
+    modesetting.enable = true;
+    powerManagement.enable = true;
+    nvidiaPersistenced = false;
+  };
+
   services.xserver.videoDrivers = [ "nvidia" ];
 
   # Configure keymap in X11
