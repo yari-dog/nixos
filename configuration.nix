@@ -93,6 +93,7 @@
       "gamemode"
       "plugdev"
       "libvirtd"
+      "podman"
     ];
     subGidRanges = [
       {

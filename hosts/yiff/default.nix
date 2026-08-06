@@ -3,7 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./resolve.nix
+    # ./resolve.nix
   ];
 
   hardware.amdgpu.initrd.enable = true;
@@ -33,6 +33,8 @@
     powerManagement.enable = true;
     nvidiaPersistenced = false;
   };
+
+  hardware.nvidia-container-toolkit.enable = true;
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
