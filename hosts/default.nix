@@ -7,7 +7,6 @@
   nixos-xivlauncher-rb,
   stylix,
   nix-flatpak,
-  tidaLuna,
   wayland-pipewire-idle-inhibit,
   ...
 }:
@@ -20,13 +19,6 @@ let
     config.allowUnfree = true;
     config.cudaSupport = true;
     config.chromium.enableWideVine = true;
-    overlays = [
-      (_: prev: {
-        cosmic-comp = prev.cosmic-comp.overrideAttrs (old: {
-          patches = (old.patches or [ ]) ++ [ ./no_ssd.patch ];
-        });
-      })
-    ];
   };
 
   lib = nixpkgs.lib;

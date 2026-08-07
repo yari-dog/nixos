@@ -14,6 +14,8 @@
     playerctl
   ];
 
+  services.awww.enable = true;
+
   programs.swaylock.enable = true;
 
   services.swayidle =

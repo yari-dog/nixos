@@ -141,6 +141,5 @@ layer-rule {
     block-out-from "screen-capture"
 }
 
-spawn-at-startup "cosmic-ext-alternative-startup"
-spawn-at-startup "bitwarden"
-// spawn-sh-at-startup "sleep 2; systemctl --user restart easyeffects.service"
+spawn-sh-at-startup "sleep 2; systemctl --user restart easyeffects.service"
+spawn-sh-at-startup "awww img 'mr wolp edited 2.png'"
