@@ -8,7 +8,7 @@
       layer = "overlay";
       width = 800;
       height = 64;
-      margin = 10;
+      margin = 0;
 
       on-button-left = "dismiss";
       on-button-right = "none";

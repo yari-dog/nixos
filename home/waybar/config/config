@@ -1,25 +1,26 @@
 {
-    "position": "top",
+    "position": "bottom",
   "layer": "top",
   "margin-left": 10,
   "margin-bottom": 0,
   "margin-right": 10,
-  "margin-top": 10,
+  "margin-top": 0,
 
     "include": [
         "~/.config/waybar/bar.json"
     ],
 
   "modules-left": ["niri/workspaces", "niri/window", "cava"],
-  "modules-center": [],
+  "modules-center": [
+    "clock"
+  ],
   "modules-right": [
     "tray",
     "pulseaudio",
     "pulseaudio#microphone",
     "battery",
     "idle_inhibitor",
-    "custom/power",
-    "clock"
+    "custom/power"
   ],
   "niri/window": {
     "format": "{}"

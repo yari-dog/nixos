@@ -7,7 +7,7 @@
   border: none;
   font-family: Sarasa Term J Nerd Font;
   /* font-weight: 500; */
-  font-size: 17px;
+  font-size: 13px;
   border: none;
   border-radius: 0px;
   margin: 0;
@@ -37,38 +37,44 @@ tooltip {
   margin: 0px;
 }
 #pulseaudio {
-  padding-left: 15px;
+  padding-left: 10px;
+  background-color: @bg-2;
+  font-weight: bold;
 }
 #cava {
-  padding: 5px 15px;
+  padding: 5px 10px;
 }
 #battery {
   padding-left: 10px;
   padding-right: 5px;
   background-color: @bg-2;
+  font-weight: bold;
 }
 
 #custom-power {
-  padding-right: 20px;
-  background-color: @bg-2;
+  padding-right: 15px;
+  background-color: @fg;
+  color: @bg;
+  font-weight: bold;
 }
 #idle_inhibitor {
   padding-left: 10px;
   padding-right: 10px;
-  background-color: @bg-2;
-}
-
-#clock {
   background-color: @fg;
   color: @bg;
   font-weight: bold;
-  padding: 0px 15px;
+}
+
+#clock {
+  background-color: @bg-2;
+  font-weight: bold;
+  padding: 0px 10px;
 }
 
 #window {
   background-color: @bg-2;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #workspaces {
