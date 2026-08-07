@@ -41,12 +41,12 @@
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    south west;
-    anchor:                      south west;
+    location:                    north;
+    anchor:                      north;
     fullscreen:                  false;
     width:                       1000px;
     x-offset:                    0px;
-    y-offset:                    0px;
+    y-offset:                    10px;
 
     /* properties for all widgets */
     enabled:                     true;

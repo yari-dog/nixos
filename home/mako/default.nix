@@ -4,11 +4,11 @@
   services.mako = {
     enable = true;
     settings = {
-      anchor = "bottom-left";
+      anchor = "top-center";
       layer = "overlay";
       width = 800;
       height = 64;
-      margin = 0;
+      margin = 10;
 
       on-button-left = "dismiss";
       on-button-right = "none";

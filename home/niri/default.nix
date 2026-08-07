@@ -1,7 +1,8 @@
 {
-  pkgs,
   host,
   inputs,
+  lib,
+  pkgs,
   ...
 }:
 
@@ -16,42 +17,79 @@
 
   services.awww.enable = true;
 
-  programs.swaylock.enable = true;
+  # programs.swaylock.enable = true;
+  programs.hyprlock = {
+    enable = true;
+    settings = {
+      general = {
+        hide_cursor = true;
+        ignore_empty_input = true;
+      };
 
-  services.swayidle =
-    let
-      # Lock command
-      lock = "loginctl lock-session";
-      display = status: "${pkgs.niri}/bin/niri msg action power-${status}-monitors";
-    in
-    {
-      enable = true;
-      timeouts = [
+      animations = {
+        enabled = true;
+        fade_in = {
+          duration = 300;
+          bezier = "easeOutQuint";
+        };
+        fade_out = {
+          duration = 300;
+          bezier = "easeOutQuint";
+        };
+      };
+
+      background = lib.mkForce [
         {
-          timeout = 600; # in seconds
-          command = "${pkgs.libnotify}/bin/notify-send 'Locking in 60 seconds' -t 5000";
-        }
-        {
-          timeout = 660;
-          command = lock;
-        }
-        {
-          timeout = 900;
-          command = display "off";
-          resumeCommand = display "on";
-        }
-        {
-          timeout = 1800;
-          command = "${pkgs.systemd}/bin/systemctl suspend";
+          path = "/home/yari/Pictures/mr wolp edited 2.png";
+          blur_passes = 0;
+          blur_size = 0;
         }
       ];
-      events = {
-        before-sleep = (display "off") + "; " + lock;
-        after-resume = display "on";
-        lock = lock;
-        unlock = display "on";
-      };
+
+      input-field = lib.mkForce [
+        {
+          size = "200, 50";
+          position = "0, -80";
+          monitor = "";
+          dots_center = true;
+          fade_on_empty = false;
+          font_color = "rgb(235, 219, 178)";
+          inner_color = "rgb(28, 28, 28)";
+          outer_color = "rgb(142, 192, 124)";
+          outline_thickness = 2;
+          placeholder_text = "<span foreground=\"##a89984\">Password...</span>";
+          shadow_passes = 0;
+          rounding = 2;
+        }
+      ];
     };
+  };
+
+  services.hypridle = {
+    settings =
+      let
+        lock = "hyprlock -g 15";
+        display = status: "${pkgs.niri}/bin/niri msg action power-${status}-monitors";
+      in
+      {
+        general = {
+          after_sleep_cmd = display "on";
+          ignore_dbus_inhibit = false;
+          lock_cmd = lock;
+        };
+        listener = [
+          {
+            on-timeout = lock;
+            timeout = 900;
+          }
+          {
+            on-resume = display "on";
+            on-timeout = display "off";
+            timeout = 1200;
+          }
+        ];
+      };
+  };
 
   home.file.".config/niri/host".source = ./config/${host};
   home.file.".config/niri/config.kdl".source = ./config/config.kdl;

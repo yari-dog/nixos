@@ -85,7 +85,7 @@ $reboot)
     run_cmd --reboot
     ;;
 $lock)
-    swaylock --daemonize
+    hyprlock -g 15
     ;;
 $suspend)
     run_cmd --suspend
