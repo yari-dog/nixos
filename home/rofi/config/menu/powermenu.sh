@@ -85,7 +85,7 @@ $reboot)
     run_cmd --reboot
     ;;
 $lock)
-    loginctl lock-session
+    swaylock --daemonize
     ;;
 $suspend)
     run_cmd --suspend
