@@ -66,6 +66,7 @@
   };
 
   services.hypridle = {
+    enable = true;
     settings =
       let
         lock = "hyprlock -g 15";
@@ -118,7 +119,7 @@
   };
 
   services.wayland-pipewire-idle-inhibit = {
-    enable = true;
+    enable = false;
     systemdTarget = "graphical-session.target";
     settings = {
       verbosity = "ERROR";
