@@ -198,7 +198,6 @@
     feh
     nvtopPackages.full
     libva-utils
-    kdePackages.kdenlive
     libnotify
     gnome-software
     fastfetch
