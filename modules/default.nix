@@ -11,6 +11,5 @@
     ./services.nix
     ./virtualisation.nix
     ./xdg.nix
-    # ./cosmic
   ];
 }
