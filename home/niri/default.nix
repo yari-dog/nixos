@@ -11,7 +11,8 @@
     inputs.wayland-pipewire-idle-inhibit.homeModules.default
   ];
   home.packages = with pkgs; [
-    xwayland-satellite
+    # xwayland-satellite
+    (pkgs.callPackage ./xwayland-sattelite.nix { })
     playerctl
   ];
 
