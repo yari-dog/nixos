@@ -8,6 +8,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./liquidctl.nix
     # ./resolve.nix
   ];
 
@@ -81,6 +82,5 @@
     (xivlauncher-rb.override { useGameMode = true; })
     clinfo
     vtfedit
-    liquidctl
   ];
 }
