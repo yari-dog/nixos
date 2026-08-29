@@ -14,15 +14,20 @@ set browser zen
 set externalclipboardcmd wl-copy
 set escapehatchsidebarhack false " stops it from closing sideberry
 set completions.Tab.statusstylepretty true 
-set completions.History.autoselect true
-set searchurls.amazon https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=
-setnull searchurls.twitter
-set searchurlweight 10
-
+set completions.History.autoselect false
+set modeindicatorshowlastex true
 " theme :3
 " they need 2 go in .config/tridactyl/themes
 colorscheme gruvbox-new
 
+setnull searchurls.twitter
+setnull searchurls.youtube
+setnull searchurls.google
+setnull searchurls.amazon
+set searchurls.!a https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=
+set searchurls.!yt https://www.youtube.com/results?search_query=
+set searchurls.!g https://www.google.com/search?udm=14&q=
+set searchurlweight 10
 
 " binds-----------------------------
 " misc
@@ -30,12 +35,14 @@ bind ,<Space> nohlsearch " clear search
 bind ,s source
 " tab stuff i guess
 bind s fillcmdline open
-bind S fillcmdline tabopen
+bind S current_url open
 bind D tabdetach
 
 " let me use normal things with ex pleaseee :(
-bind --mode=ex <ArrowDown> ex.next_completion
-bind --mode=ex <ArrowUp> ex.prev_completion
+"bind --mode=ex <ArrowDown> ex.next_completion
+"bind --mode=ex <ArrowUp> ex.prev_completion
+"unbind --mode=ex <Space>
+
 " rebinds for colemak
 unbind j
 unbind k
@@ -46,10 +53,10 @@ unbind K
 unbind L
 unbind H
 
-bind n scrollpx -50
+"bind n scrollpx -50
 bind e scrollline 5
 bind i scrollline -5
-bind o scrollpx 50
+"bind o scrollpx 50
 
 bind gn back
 bind ge tabnext
@@ -67,4 +74,5 @@ unbind <C-e>
 unbind <C-b>
 unbind <C-h>
 
-bind qq <Esc>
+"hinting
+bind ;? winopen moz-extension://cac12804-920b-45a3-80ab-3422327293b4/static/docs/modules/_src_excmds_.html#hint
