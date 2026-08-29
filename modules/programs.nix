@@ -213,5 +213,10 @@
     yt-dlp
     video-trimmer
     baobab
+
+    # for yazi plugins
+    ripdrag
+    mediainfo
+    imagemagick
   ];
 }

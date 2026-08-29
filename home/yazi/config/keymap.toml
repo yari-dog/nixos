@@ -16,6 +16,23 @@ prepend_keymap = [
   { on = ["b", "k"], run = "close" },
   { on = ["t", "k"], run = "close" },
 
+  #' for split tabs'
+  { on = "\\", run = [ "plugin split-tabs spl_toggle", "plugin split-tabs spl_preview"], desc = "Split-tabs: toggle split tabs mode" },
+  { on = "<Tab>", run = "plugin split-tabs spl_switch_tab", desc = "Split-tabs: switch to the other pane" },
+  { on = "<F5>", run = [ "escape --visual", "plugin split-tabs spl_copy" ], desc = "Split-tabs: copy to the other pane" },
+  { on = "<F6>", run = [ "escape --visual", "plugin split-tabs spl_move" ], desc = "Split-tabs: move to the other pane" },
+  { on = "P", run = "plugin split-tabs spl_preview", desc = "Split-tabs: toggle preview pane" },
+
+  # for the system ctlipboard copy stuff
+  { on  = "y", run = [ "yank", 'plugin clipboard-ya -- --action=copy' ], desc = "Yank selected files (copy)"},
+  { on  = "x", run = [ "yank --cut", 'plugin clipboard-ya -- --action=copy' ], desc = "Yank selected files (cut)"},
+  { on  = "<C-p>", run = [ 'plugin clipboard-ya -- --action=paste' ], desc = "Paste yanked system clipboard files"},
+
+  # drag and drop
+  { on   = [ "<C-d>" ], run  = "plugin drag", desc = "Drag Files"},
+
+  # mount
+  { on  = "M", run = "plugin mount", desc = "mount stuff"},
 ]
 
 [tasks]
