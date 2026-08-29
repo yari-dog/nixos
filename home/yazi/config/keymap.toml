@@ -16,6 +16,10 @@ prepend_keymap = [
   { on = ["b", "k"], run = "close" },
   { on = ["t", "k"], run = "close" },
 
+  # additional gotos
+  { on = ["g", "v"], run = "cd ~/Videos"},
+  { on = ["g", "s"], run = "cd ~/.local/share/Steam/steamapps/common/"},
+
   #' for split tabs'
   { on = "\\", run = [ "plugin split-tabs spl_toggle", "plugin split-tabs spl_preview"], desc = "Split-tabs: toggle split tabs mode" },
   { on = "<Tab>", run = "plugin split-tabs spl_switch_tab", desc = "Split-tabs: switch to the other pane" },
