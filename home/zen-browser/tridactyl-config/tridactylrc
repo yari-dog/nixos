@@ -27,6 +27,7 @@ setnull searchurls.amazon
 set searchurls.!a https://www.amazon.co.uk/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=
 set searchurls.!yt https://www.youtube.com/results?search_query=
 set searchurls.!g https://www.google.com/search?udm=14&q=
+set searchurls.!img https://kagi.com/images?q=
 set searchurlweight 10
 
 " binds-----------------------------
