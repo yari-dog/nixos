@@ -87,7 +87,6 @@
     whatsapp-electron
     darktable
     qpwgraph
-    inputs.tidaLuna.packages.${stdenv.hostPlatform.system}.default
     digikam
     obs-cmd
   ];

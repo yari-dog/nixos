@@ -11,7 +11,6 @@
     stylix.url = "github:nix-community/stylix";
     nixvim.url = "github:nix-community/nixvim";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-    tidaLuna.url = "github:Inrixia/TidaLuna";
     wayland-pipewire-idle-inhibit.url = "github:rafaelrc7/wayland-pipewire-idle-inhibit";
   };
   outputs =
@@ -26,7 +25,6 @@
       stylix,
       nixvim,
       nix-flatpak,
-      tidaLuna,
       wayland-pipewire-idle-inhibit,
     }:
     {
@@ -44,7 +42,6 @@
             stylix
             nixvim
             nix-flatpak
-            tidaLuna
             wayland-pipewire-idle-inhibit
             ;
         }
