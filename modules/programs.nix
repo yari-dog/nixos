@@ -175,7 +175,7 @@
     # keyutils
 
     libimobiledevice
-    # ifuse
+    ifuse
     remmina
     p7zip
     distrobox

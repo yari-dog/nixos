@@ -57,6 +57,8 @@
 
   services.gnome.gnome-keyring.enable = true;
 
-  services.usbmuxd.enable = true;
-
+  services.usbmuxd = {
+    enable = true;
+    package = pkgs.usbmuxd2;
+  };
 }
