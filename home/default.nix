@@ -26,8 +26,9 @@
 
   services.easyeffects.enable = true;
 
-  services.trayscale.enable = true;
   services.gnome-keyring.enable = true;
+
+  services.trayscale.enable = true;
 
   stylix.targets.starship.enable = false;
   stylix.targets.gtk.enable = false;
