@@ -38,27 +38,27 @@ textbox-prompt-colon {
     str:                         "";
     padding:                     5px 10px;
     background-color:            transparent;
-    text-color:                  @background;
+    text-color:                  @bg0;
 }
 prompt {
     padding:                     5px;
-    background-color:            @active;
-    text-color:                  @background;
+    background-color:            @accent-color;
+    text-color:                  @bg0;
 }
 
 /*****----- Message -----*****/
 message {
     padding:                     0px;
-    border-color:                @selected;
-    background-color:            @background-alt;
-    text-color:                  @foreground;
+    border-color:                @accent-color;
+    background-color:            @bg1;
+    text-color:                  @fg0;
 }
 textbox {
     background-color:            inherit;
     text-color:                  inherit;
     vertical-align:              0.5;
     horizontal-align:            0.5;
-    placeholder-color:           @foreground;
+    placeholder-color:           @fg0;
     blink:                       true;
     markup:                      true;
 }
@@ -66,9 +66,9 @@ error-message {
     padding:                     10px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
-    background-color:            @background;
-    text-color:                  @foreground;
+    border-color:                @accent-color;
+    background-color:            @bg0;
+    text-color:                  @fg0;
 }
 
 /*****----- Listview -----*****/
@@ -78,16 +78,16 @@ listview {
     padding: 0;
     
     spacing:                     15px;
-    border-color:                @selected;
-    background-color: @background-alt-2;
+    border-color:                @accent-color;
+    background-color: @bg1;
 }
 
 /*****----- Elements -----*****/
 element {
     padding: 6px;
     spacing:                     0px;
-    border-color:                @selected;
-    background-color:            @background-alt-2;
+    border-color:                @accent-color;
+    background-color:            @bg1;
 }
 element-text {
     vertical-align:              0.5;
@@ -95,15 +95,15 @@ element-text {
 }
 
 element alternate.normal {
-    background-color:            @background-alt-2;
+    background-color:            @bg1;
 }
 element normal.normal {
-    background-color:            @background-alt-2;
+    background-color:            @bg1;
 }
 
 element selected.normal {
     border:                      0px 0px 0px 0px;
     border-radius:               0px;
-    background-color:            var(selected);
-    text-color:                  var(background);
+    background-color:            var(accent-color);
+    text-color:                  var(bg0);
 }

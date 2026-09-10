@@ -1,0 +1,77 @@
+#!/run/current-system/sw/bin/python3
+import subprocess
+import re
+
+def theme():
+    return "~/.config/rofi/base-style.rasi"
+
+def get_audio_devices():
+    in_use_device = subprocess.run(
+        ["pactl", "get-default-sink"], stdout=subprocess.PIPE
+    ).stdout.decode("utf-8")[:-1]
+    # Run the pactl command to list sinks
+    result = subprocess.run(['pactl', 'list', 'sinks'], stdout=subprocess.PIPE)
+    output = result.stdout.decode('utf-8')
+
+    # Regular expressions to extract relevant fields
+    product_name_re = re.compile(r'device\.product\.name = "(.+)"')
+    profile_description_re = re.compile(r'device\.profile\.description = "(.+)"')
+    name_re = re.compile(r'Name: (.+)')
+    nick_re = re.compile(r'node\.nick = "(.+)"')
+    node_name_re = re.compile(r'node\.name = "(.+)"')
+
+    devices = []
+    current_device = {}
+
+    for line in output.split('\n'):
+        product_name_match = product_name_re.search(line)
+        profile_description_match = profile_description_re.search(line)
+        name_match = name_re.search(line)
+        nick_match = nick_re.search(line)
+        node_name_match = node_name_re.search(line)
+
+        if product_name_match:
+            current_device['product_name'] = product_name_match.group(1)
+        if profile_description_match:
+            current_device['profile_description'] = profile_description_match.group(1)
+        if name_match:
+            current_device['name'] = name_match.group(1)
+        if nick_match:
+            current_device['nick'] = nick_match.group(1)
+        if node_name_match:
+            current_device['node_name'] = node_name_match.group(1)
+
+        if 'product_name' in current_device and 'profile_description' in current_device:
+            if current_device["node_name"] == in_use_device:
+                current_device["product_name"] = "> " + current_device["product_name"]
+            devices.append(current_device)
+            current_device = {}
+
+    return devices
+
+def select_device(devices):
+    # Format the devices for rofi
+    rofi_input = "\n".join([f"{d['product_name']} - {d['profile_description']} ({d['nick']})" for d in devices])
+    # Run rofi to select a device
+    result = subprocess.run(['rofi', '-dmenu', '-theme', theme(),'-i', '-p', 'Select Audio Output Device'], input=rofi_input, text=True, stdout=subprocess.PIPE)
+    selected_device = result.stdout.strip()
+
+    if selected_device:
+        # Find the corresponding node_name
+        for device in devices:
+            display_name = f"{device['product_name']} - {device['profile_description']} ({device['nick']})"
+            if display_name == selected_device:
+                return device['node_name'], display_name
+    return None
+
+def set_default_sink(node_name, display_name):
+    if node_name:
+        subprocess.run(['pactl', 'set-default-sink', node_name])
+        subprocess.run(['notify-send', 'Audio Output Device', f'Default audio output device set to {display_name}'])
+    else:
+        subprocess.run(['notify-send', 'Audio Output Device', 'No device selected'])
+
+if __name__ == "__main__":
+    devices = get_audio_devices()
+    selected_device, display_name = select_device(devices)
+    set_default_sink(selected_device, display_name)

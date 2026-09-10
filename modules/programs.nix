@@ -218,5 +218,6 @@
     ripdrag
     mediainfo
     imagemagick
+    pulseaudio
   ];
 }

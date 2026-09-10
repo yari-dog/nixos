@@ -6,7 +6,6 @@
  * Configuration For Rofi Version: 1.7.3
  **/
 
-@import "~/.config/rofi/colors/gruvbox.rasi"
 @import "~/.config/rofi/base-style.rasi"
 
 configuration {
