@@ -15,6 +15,7 @@
     ./rofi
     ./shell
     ./waybar
+    ./wayle
     ./xdg
     ./yazi
     ./zen-browser
