@@ -7,14 +7,12 @@
   imports = [
     ./environment
     ./font
-    ./mako
     ./niri
     ./nvim
     ./programs
     ./qutebrowser
     ./rofi
     ./shell
-    ./waybar
     ./wayle
     ./xdg
     ./yazi
