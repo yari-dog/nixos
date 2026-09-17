@@ -23,46 +23,6 @@ in
       ./plugins
     ];
 
-    colorschemes = {
-      gruvbox = {
-        enable = true;
-        settings = {
-          overrides = {
-            # "@lsp.type.variable" = {
-            #   bold = true;
-            # };
-            "@property" = {
-              fg = "#ebdbb2";
-              italic = true;
-            };
-            "@variable.member" = {
-              fg = "#ebdbb2";
-              italic = true;
-            };
-            # "@lsp.type.const" = {
-            #   bold = true;
-            # };
-            # "@lsp.type.type" = {
-            #   bold = false;
-            # };
-            "@string" = {
-              fg = "#8ec07c";
-              italic = true;
-            };
-            "@punctuation.bracket" = {
-              link = "GruvboxFg1";
-            };
-            "@punctuation.delimiter" = {
-              link = "GruvboxFg1";
-            };
-            "@constructor" = {
-              link = "GruvboxFg1";
-            };
-          };
-        };
-      };
-    };
-
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html#globals
     globals = {
       # Set <space> as the leader key

@@ -18,7 +18,8 @@ set completions.History.autoselect false
 set modeindicatorshowlastex true
 " theme :3
 " they need 2 go in .config/tridactyl/themes
-colorscheme gruvbox-new
+"colorscheme gruvbox-new
+colorscheme kanagawa-dragon
 
 setnull searchurls.twitter
 setnull searchurls.youtube
