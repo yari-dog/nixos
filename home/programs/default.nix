@@ -38,6 +38,7 @@
         VolumeBooster.enabled = true;
         AnonymiseFileNames.enabled = true;
         YoutubeAdblock.enabled = true;
+        FakeNitro.enabled = true;
       };
     };
   };

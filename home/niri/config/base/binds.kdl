@@ -3,11 +3,12 @@ binds {
 
     Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
     Mod+Semicolon hotkey-overlay-title="Run an Application: rofi" { spawn-sh "~/.config/rofi/menu/launcher.sh"; }
-    Mod+A hotkey-overlay-title="Change Audio Output" { spawn-sh "~/.config/rofi/scripts/dmenu_sound"; }
+    Mod+A hotkey-overlay-title="Swap Audio Output" { spawn "noctalia" "msg" "plugin" "blackbartblues/audio-switcher:service" "all" "cycle-output";  }
+    Mod+Shift+A hotkey-overlay-title="Annotate Screen" { spawn "noctalia" "msg" "annotate"; }
     Mod+W hotkey-overlay-title="Run an Application: zen" { spawn "zen"; }
     Mod+Y hotkey-overlay-title="Run an Application: yazi" { spawn "foot" "yazi"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    Mod+L hotkey-overlay-title="Lock dialog" { spawn-sh "~/.config/rofi/menu/powermenu.sh"; }
+    Super+Shift+L hotkey-overlay-title="Lock the Screen" { spawn "noctalia" "msg" "session" "lock"; }
+    Mod+L hotkey-overlay-title="Lock dialog" { spawn "noctalia" "msg" "panel-open" "session"; }
 
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 

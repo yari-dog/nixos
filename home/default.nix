@@ -7,13 +7,13 @@
   imports = [
     ./environment
     ./font
+    ./noctalia
     ./niri
     ./nvim
     ./programs
     ./qutebrowser
     ./rofi
     ./shell
-    ./wayle
     ./xdg
     ./yazi
     ./zen-browser

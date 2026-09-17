@@ -36,7 +36,9 @@
   services.udisks2.enable = true;
 
   services.gvfs.enable = true;
+
   services.xserver.enable = true;
+  services.xserver.desktopManager.runXdgAutostartIfNone = true;
 
   services.libinput = {
     enable = true;

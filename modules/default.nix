@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./fcitx.nix
     ./fonts.nix
     ./hardware.nix
     ./greetd.nix

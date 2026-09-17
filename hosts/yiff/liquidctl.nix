@@ -25,7 +25,7 @@
       # the command to execute when the service starts up
       ExecStart = [
         "${pkgs.liquidctl}/bin/liquidctl initialize all"
-        "${pkgs.liquidctl}/bin/liquidctl set lcd screen gif /home/yari/Pictures/salute-mr-wolf.gif"
+        "${pkgs.liquidctl}/bin/liquidctl set lcd screen gif /home/yari/Pictures/.user/salute-mr-wolf.gif"
       ];
       # and the command to execute
       # ExecStop = "${pkgs.screen}/bin/screen -S irc -X quit";

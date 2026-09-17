@@ -141,5 +141,6 @@ layer-rule {
     block-out-from "screen-capture"
 }
 
-spawn-sh-at-startup "sleep 2; systemctl --user restart easyeffects.service"
-spawn-sh-at-startup "awww img 'mr wolp edited 2.png'"
+spawn-sh-at-startup "sleep 3; systemctl --user restart easyeffects.service"
+// spawn-sh-at-startup "awww img 'mr wolp edited 2.png'"
+spawn-at-startup "noctalia"

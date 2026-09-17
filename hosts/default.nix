@@ -8,6 +8,7 @@
   stylix,
   nix-flatpak,
   wayland-pipewire-idle-inhibit,
+  noctalia,
   ...
 }:
 
@@ -40,6 +41,7 @@ in
       nixos-xivlauncher-rb.nixosModules.default
       stylix.nixosModules.stylix
       nix-flatpak.nixosModules.nix-flatpak
+      # noctalia.homeModule
       {
         home-manager = {
           useGlobalPkgs = true;
