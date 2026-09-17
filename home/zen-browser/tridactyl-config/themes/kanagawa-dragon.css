@@ -32,6 +32,12 @@
   --tridactyl-hintspan-fg: var(--kanagawa-fg);
   --tridactyl-hint-active-bg: var(--kanagawa-green);
   --tridactyl-hint-active-fg: var(--kanagawa-bg);
+  --tridactyl-hint-bg: color-mix(
+    in srgb,
+    var(--kanagawa-green) 20%,
+    transparent
+  );
+  --tridactyl-hint-outline: 1px solid var(--kanagawa-green);
 
   --tridactyl-highlight-box-bg: var(--kanagawa-bg-soft);
   --tridactyl-highlight-box-fg: var(--kanagawa-fg);
