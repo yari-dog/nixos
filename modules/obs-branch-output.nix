@@ -9,7 +9,7 @@
 
 stdenv.mkDerivation rec {
   pname = "obs-branch-output";
-  version = "1.0.9";
+  version = "1.0.13";
 
   src = fetchFromGitHub {
     owner = "OPENSPHERE-Inc";
@@ -26,9 +26,10 @@ stdenv.mkDerivation rec {
     qt6.qtbase
   ];
 
-  #  cmakeFlags = [
-  #
-  # ]
+  cmakeFlags = [
+    "-DCMAKE_CXX_FLAGS=-Wno-error=sfinae-incomplete"
+    # "-Wsfinae-incomplete=2"
+  ];
   dontWrapQtApps = true;
 
   postInstall = ''

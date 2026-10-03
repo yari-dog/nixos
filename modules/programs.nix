@@ -206,7 +206,7 @@
     ghidra-bin
     audacity
     patchelf
-    firefox
+    # firefox
     gimp
     deezer-enhanced
     nix-index
