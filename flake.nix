@@ -8,6 +8,7 @@
     nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
     nixos-xivlauncher-rb.url = "github:The1Penguin/nixos-xivlauncher-rb";
     zen-browser.url = "github:youwen5/zen-browser-flake";
+    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
     stylix.url = "github:nix-community/stylix";
     nixvim.url = "github:nix-community/nixvim";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
