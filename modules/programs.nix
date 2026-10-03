@@ -92,6 +92,7 @@
   programs.steam = {
     enable = true;
     protontricks.enable = true;
+    gamescopeSession.enable = true;
   };
 
   programs.thunar.enable = true;
