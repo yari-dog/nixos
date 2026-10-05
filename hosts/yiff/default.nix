@@ -20,6 +20,8 @@
     "video=DP-2:3440x1440@75.050"
   ];
 
+  boot.supportedFilesystems = [ "ntfs" ];
+
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
