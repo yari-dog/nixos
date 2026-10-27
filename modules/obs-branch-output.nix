@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
     owner = "OPENSPHERE-Inc";
     repo = "branch-output";
     rev = version;
-    sha256 = "sha256-dnSRCQjVB7W93isFuW93NVQNllmRb3Xu8Vs5nFSeiOw=";
+    sha256 = "sha256-9n9lLT/BfzDM1/83qG6gWHL5Rjr8UiOuc8G0/lob3kI=";
   };
 
   nativeBuildInputs = [
