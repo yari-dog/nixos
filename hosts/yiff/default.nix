@@ -22,6 +22,11 @@
 
   boot.supportedFilesystems = [ "ntfs" ];
 
+  boot.kernelModules = [
+    "hid-sony"
+    "hid-playstation"
+  ];
+
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
@@ -84,5 +89,6 @@
     (xivlauncher-rb.override { useGameMode = true; })
     clinfo
     vtfedit
+    dualsensectl
   ];
 }
