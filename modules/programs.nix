@@ -50,8 +50,8 @@
       # };
 
       custom = {
-        start = "${pkgs.libnotify}/bin/notify-send -e 'GameMode started'";
-        end = "${pkgs.libnotify}/bin/notify-send -e 'GameMode ended'";
+        start = "/home/yari/.local/bin/obs-spawn.sh";
+        end = "/home/yari/.local/bin/obs-close.sh";
       };
     };
   };
@@ -121,6 +121,8 @@
     };
     enableReleaseChecks = false;
   };
+
+  environment.localBinInPath = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
