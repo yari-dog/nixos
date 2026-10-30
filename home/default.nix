@@ -23,6 +23,14 @@
   home.homeDirectory = "/home/yari";
   home.stateVersion = "26.05";
 
+  home.file.".local/share/Steam/steam_dev.cfg".text = ''
+    @ShaderBackgroundProcessingThreads 12
+    @nClientDownloadEnableHTTP2PlatformLinux 0
+    @fDownloadRateImprovementToAddAnotherConnection 1.0
+    @cMaxContentStatsdays 30
+    @cMaxPendingUploads 4
+  '';
+
   services.easyeffects.enable = true;
 
   services.gnome-keyring.enable = true;

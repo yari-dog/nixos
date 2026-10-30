@@ -94,6 +94,7 @@
     protontricks.enable = true;
     gamescopeSession.enable = true;
   };
+  # steam dev config in home manager->default
 
   programs.thunar.enable = true;
 
