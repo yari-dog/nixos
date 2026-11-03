@@ -39,7 +39,7 @@
 
       # Required
       glib
-      gtk2
+      # gtk2 NOTE: deprecated and gives 12 billion errors
 
       # Inspired by steam
       # https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/st/steam/package.nix#L36-L85
@@ -100,7 +100,7 @@
       freeglut
       libjpeg
       libpng
-      libpng12
+      # libpng12 NOTE: "was removed due to security issues"
       libsamplerate
       libmikmod
       libtheora
