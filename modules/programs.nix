@@ -110,9 +110,9 @@
       size = 18;
     };
     fonts = {
-      serif.name = "Sarasa Term J Nerd Font";
-      sansSerif.name = "Sarasa Term J Nerd Font";
-      monospace.name = "Sarasa Term J Nerd Font";
+      serif.name = "Sarasa Term Slab J Nerd Font";
+      sansSerif.name = "Sarasa Term Slab J Nerd Font";
+      monospace.name = "Sarasa Term Slab J Nerd Font";
     };
     icons = {
       package = pkgs.gruvbox-dark-icons-gtk;

@@ -90,5 +90,6 @@
     qpwgraph
     digikam
     obs-cmd
+    concord-tui
   ];
 }
