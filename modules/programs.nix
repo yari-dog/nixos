@@ -166,7 +166,8 @@
     # bitwarden-cli
     # bitwarden-menu
 
-    vial
+    #vial TODO: when https://github.com/NixOS/nixpkgs/pull/583037 gets added return to regular
+    (pkgs.callPackage ./vial.nix { })
     qmk
     dos2unix
     pkgsCross.avr.buildPackages.gcc
