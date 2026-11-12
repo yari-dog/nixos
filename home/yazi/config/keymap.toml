@@ -17,8 +17,11 @@ prepend_keymap = [
   { on = ["t", "k"], run = "close" },
 
   # additional gotos
-  { on = ["g", "v"], run = "cd ~/Videos"},
-  { on = ["g", "s"], run = "cd ~/.local/share/Steam/steamapps/common/"},
+  { on = ["g", "v"], run = "cd ~/Videos", desc = "go to ~/Videos"},
+  { on = ["g", "s"], run = "cd ~/.local/share/Steam/steamapps/common/", desc = "go to ~/.local/share/steam/steamapps/common"},
+  { on = ["g", "l"], run = "cd ~/.local/share/", desc = "go to local/share"},
+  { on = ["g", "/"], run = "cd /", desc = "Go to root"},
+  { on = ["g", "m"], run = "cd /mnt", desc = "Go to mounts"},
 
   #' for split tabs'
   { on = "|", run = [ "plugin split-tabs spl_toggle", "plugin split-tabs spl_preview"], desc = "Split-tabs: toggle split tabs mode" },
@@ -26,6 +29,8 @@ prepend_keymap = [
   { on = "<F5>", run = [ "escape --visual", "plugin split-tabs spl_copy" ], desc = "Split-tabs: copy to the other pane" },
   { on = "<F6>", run = [ "escape --visual", "plugin split-tabs spl_move" ], desc = "Split-tabs: move to the other pane" },
   { on = "P", run = "plugin split-tabs spl_preview", desc = "Split-tabs: toggle preview pane" },
+  # to fix the missing <Tab> info bit
+  { on = "<S-Tab>", run = "spot"},
 
   # for the system ctlipboard copy stuff
   { on  = "y", run = [ "yank", 'plugin clipboard-ya -- --action=copy' ], desc = "Yank selected files (copy)"},

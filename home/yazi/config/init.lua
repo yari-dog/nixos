@@ -16,6 +16,7 @@ require("keep-preferences"):setup({
 			},
 		},
 	},
+	sticky = { "show_hidden", "linemode" },
 })
 
 function Linemode:size_and_mtime()
