@@ -67,5 +67,6 @@
     digikam
     obs-cmd
     concord-tui
+    handbrake
   ];
 }

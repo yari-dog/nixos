@@ -113,11 +113,12 @@
       serif.name = "Sarasa Term Slab J Nerd Font";
       sansSerif.name = "Sarasa Term Slab J Nerd Font";
       monospace.name = "Sarasa Term Slab J Nerd Font";
+      sizes.applications = 13;
     };
     icons = {
-      package = pkgs.gruvbox-dark-icons-gtk;
-      dark = "oomox-gruvbox-dark";
-      light = "oomox-gruvbox-dark";
+      package = pkgs.kanagawa-icon-theme;
+      dark = "oomox-Kanagawa";
+      light = "oomox-Kanagawa";
       enable = true;
     };
     enableReleaseChecks = false;
