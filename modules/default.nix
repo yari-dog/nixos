@@ -3,7 +3,7 @@
 {
   imports = [
     ./fcitx.nix
-    ./fonts.nix
+    ./font
     ./hardware.nix
     ./greetd.nix
     ./nix-ld.nix

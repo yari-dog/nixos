@@ -13,5 +13,6 @@
     nerd-fonts.dejavu-sans-mono
     corefonts
     vista-fonts
+    (callPackage ./package.nix { })
   ];
 }
