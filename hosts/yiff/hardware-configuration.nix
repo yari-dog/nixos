@@ -16,6 +16,7 @@
 
   boot.initrd.availableKernelModules = [
     "xhci_pci"
+    "ahci"
     "nvme"
     "usbhid"
     "usb_storage"
@@ -45,6 +46,18 @@
     options = [
       "x-systemd.automount"
       "noauto"
+      "x-gvfs-show"
+    ];
+  };
+
+  fileSystems."/mnt/ext-storage" = {
+    device = "/dev/disk/by-uuid/467e47be-97d9-4a9f-8921-85fd6eedcd3c";
+    fsType = "btrfs";
+    options = [
+      "subvol=ext-storage"
+      "compress=zstd"
+      "x-gvfs-show"
+      "noatime"
     ];
   };
 

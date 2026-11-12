@@ -61,13 +61,21 @@
   hardware.nvidia-container-toolkit.enable = true;
 
   services.xserver.videoDrivers = [ "nvidia" ];
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
 
+  services.btrfs.autoScrub.enable = true;
+  # services.beesd.filesystems = {
+  #   root = {
+  #     spec = "LABEL=root";
+  #     hashTableSizeMB = 2048;
+  #     verbosity = "crit";
+  #     extraOptions = [ "--loadavg-target" "5.0" ];
+  #   };
+  # };
   # services.monado = {
   #   enable = true;
   #   defaultRuntime = true;
