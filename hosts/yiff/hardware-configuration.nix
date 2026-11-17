@@ -61,6 +61,28 @@
     ];
   };
 
+  # needed for smb mount
+  environment.systemPackages = [ pkgs.cifs-utils ];
+  # on new install need to create /etc/nixos/smb-secrets:
+  # username=<USERNAME>
+  # password=<PASSWORD>
+  fileSystems."/mnt/diskstation" = {
+    device = "//192.168.1.75/DATA - PJ";
+    fsType = "cifs";
+    options =
+      let
+        # this line prevents hanging on network split
+        automount_opts = "x-systemd.automount,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+
+      in
+      [
+        "${automount_opts},credentials=/etc/nixos/smb-secrets"
+        "vers=2.0"
+        "nofail"
+        "x-gvfs-show"
+      ];
+  };
+
   swapDevices = [
     { device = "/dev/disk/by-uuid/0336a9f3-b505-4759-a6a7-ba9db183c7f8"; }
   ];
