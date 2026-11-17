@@ -225,5 +225,6 @@
     mediainfo
     imagemagick
     pulseaudio
+    gparted
   ];
 }

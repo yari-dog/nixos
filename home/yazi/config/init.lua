@@ -39,9 +39,9 @@ require("full-border"):setup()
 -- ya.emit("plugin", { "split-tabs", "spl_activate" })
 
 require("yatline"):setup({
-	section_separator = { open = "", close = "" },
+	section_separator = { open = "", close = "" },
 	part_separator = { open = "", close = "" },
-	inverse_separator = { open = "", close = "" },
+	inverse_separator = { open = "", close = "" },
 
 	padding = { inner = 1, outer = 1 },
 
