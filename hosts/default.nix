@@ -20,6 +20,10 @@ let
     config.allowUnfree = true;
     # config.cudaSupport = true;
     config.chromium.enableWideVine = true;
+    config.permittedInsecurePackages = [
+      "deezer-enhanced-1.5.1"
+      "qutebrowser-3.7.0"
+    ];
   };
 
   lib = nixpkgs.lib;
