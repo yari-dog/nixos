@@ -50,6 +50,8 @@
     -- Text objects
     vim.keymap.set({ "o", "v", "x" }, "t", "i", { desc = "O/V mode: inner (i)" })
     -- vim.keymap.set({ "o", "v", "x" }, "a", "a", { desc = "O/V mode: a/an (a)" }) NOTE: still here to remember
+    vim.keymap.set({ "o", "v", "x" }, "tn", "in", { desc = "O/V mode: select inner child (in)" })
+    vim.keymap.del("", "in") -- actually delete the bind that causes the lag problem
 
       -- insert (T)
     vim.keymap.set("n", "t", "i")
