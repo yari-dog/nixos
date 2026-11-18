@@ -1,22 +1,23 @@
 { ... }:
 {
   imports = [
-    ./gitsigns.nix
-    ./which-key.nix
-    ./telescope.nix
-    ./lsp.nix
-    ./conform.nix
+    ./autopairs.nix
     ./blink-cmp.nix
-    ./todo-comments.nix
-    ./mini.nix
-    ./treesitter.nix
     ./bufferline.nix
-    ./smear-cursor.nix
-    ./oil.nix
-    ./yazi.nix
+    ./colorizer.nix
+    ./conform.nix
     ./debug.nix
+    ./gitsigns.nix
     ./indent-blankline.nix
     ./lint.nix
-    ./autopairs.nix
+    ./lsp.nix
+    ./mini.nix
+    ./oil.nix
+    ./smear-cursor.nix
+    ./telescope.nix
+    ./todo-comments.nix
+    ./treesitter.nix
+    ./which-key.nix
+    ./yazi.nix
   ];
 }
