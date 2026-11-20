@@ -1,4 +1,9 @@
-{ pkgs, host, ... }:
+{
+  lib,
+  pkgs,
+  host,
+  ...
+}:
 {
   programs.bash = {
     enable = true;
@@ -88,6 +93,8 @@
       }
     );
   };
+
+  programs.librepods.enable = true;
 
   programs.steam = {
     enable = true;

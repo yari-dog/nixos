@@ -94,6 +94,7 @@
       "plugdev"
       "libvirtd"
       "podman"
+      "librepods"
     ];
     subGidRanges = [
       {
